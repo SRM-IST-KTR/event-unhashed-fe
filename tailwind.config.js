@@ -5,7 +5,6 @@ module.exports = {
     colors: {
       'buttonbg': '#1D426B',
       'buttontext': '#29CCC4',
-
     }
   },
   plugins: [],

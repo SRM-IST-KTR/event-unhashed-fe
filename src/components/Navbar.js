@@ -44,7 +44,7 @@ export const Navbar = () => {
       </nav>
 
       {/* Mobile Hamburger Menu */}
-      <nav className="bg-[#000000] md:hidden flex items-center h-32 relative">
+      <nav className="bg-[#000000] md:hidden flex items-center h-32 relative ">
         <button
           className="outline-none mobile-menu-button absolute left-10 top-10"
           onClick={() => showMenu()}
@@ -68,6 +68,7 @@ export const Navbar = () => {
           <img src={gcsrmLogo} alt="GCSRM Logo" className="h-12" />
         </figure>
       </nav>
+
       {/* Mobile Hamburger Menu */}
       {navbarOpen && (
         <div className="z-50">
