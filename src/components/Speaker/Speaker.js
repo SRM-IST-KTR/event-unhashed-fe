@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import speakerImg from '../../assets/Gita.png';
 import './Speaker.css';
 
-export default function SignIn() {
+export default function Speaker() {
   const aboutSpeaker = 'Gita Alekhya Paul is an undergraduate student at SRMIST,Kattankulathur.He is an MLH Fellowship alumni and contributor to popular repositories like Amazon AWS Amplify and Hoppscotch.Gita is a keen cybersecurity student, and is fond of making and breaking web applications. Ask him about Javascript, APIs, Hacking and Open-source!';
 
   return (

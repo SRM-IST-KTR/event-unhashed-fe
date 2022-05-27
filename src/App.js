@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import About from './components/About/About';
 import Speaker from './components/Speaker/Speaker';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-function App() {
-  return (
-    <Router>
-      <Route path="/" exact component={Speaker} />
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div class="container">
+        <About />
+        <Speaker />
+      </div>
+    );
+  }
 }
-
+ 
 export default App;
