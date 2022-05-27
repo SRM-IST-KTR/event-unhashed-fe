@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      'buttonbg': '#29CCC4',
+      'buttonbg': '#1D426B',
+      'buttontext': '#29CCC4',
 
     }
   },

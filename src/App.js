@@ -8,7 +8,10 @@ function App() {
       <header>
         <title>Unhashed</title>
       </header>
+      <body>
       <Navbar />
+
+      </body>
     </div>
   );
 }
