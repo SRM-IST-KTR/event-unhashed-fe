@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {Navbar} from './components/Navbar';
+import { Sponsors } from './components/Sponsors';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       </header>
       <body>
       <Navbar />
-
+      <Sponsors />
       </body>
     </div>
   );
