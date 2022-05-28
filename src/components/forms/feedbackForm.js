@@ -1,5 +1,5 @@
 const FeedbackForm = () => {
-    return <div>Feedback form</div>
-}
+  return <div>Feedback form</div>;
+};
 
-export default FeedbackForm
+export default FeedbackForm;

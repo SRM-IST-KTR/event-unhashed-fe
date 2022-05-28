@@ -1,5 +1,5 @@
 const FormHeading = (heading) => {
-    return <div>{heading}</div>
-}
+  return <div>{heading}</div>;
+};
 
-export default FormHeading
+export default FormHeading;

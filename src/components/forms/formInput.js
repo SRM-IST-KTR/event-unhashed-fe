@@ -1,5 +1,13 @@
-const Input = (type,width) => {
-    return <input type={type} className={"m-1 py-5 px-30 text-black rounded-2xl " + width} />
-}
+const Input = (props) => {
+  return (
+    <div className="w-full">
+      <div className="text-xl py-4">
+        {props.label}
+        <span className="text-[#ff0000]"> *</span>
+      </div>
+      <div className="flex justify-between">{props.children}</div>
+    </div>
+  );
+};
 
-export default Input
+export default Input;

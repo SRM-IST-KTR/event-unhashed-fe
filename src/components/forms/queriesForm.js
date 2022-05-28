@@ -1,5 +1,5 @@
 const QueriesForm = () => {
-    return <div>QueriesForm</div>
-}
+  return <div>QueriesForm</div>;
+};
 
-export default QueriesForm
+export default QueriesForm;
