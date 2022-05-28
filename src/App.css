@@ -6,3 +6,6 @@ body{
     background-image: 
 }
 
+.carouselBox{
+    border-image: url("/src/utils/icons/RectangleBorder.png") 35;
+}
