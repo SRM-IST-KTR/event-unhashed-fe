@@ -16,8 +16,8 @@ function App() {
       <body>
       <Navbar />
       <Banner />
-      <Speaker />
       <About />
+      <Speaker />
       <Sponsors />
       <Timer />
       <Footer />
