@@ -5,7 +5,7 @@ import { Sponsors } from './components/Sponsors';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage: 'url("/BG.png")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
       <header>
         <title>Unhashed</title>
       </header>

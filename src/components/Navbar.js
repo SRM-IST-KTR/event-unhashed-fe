@@ -25,7 +25,7 @@ export const Navbar = () => {
   return (
     <div>
       {/* Table and Desktop Navbar */}
-      <nav className=" bg-[#000000] h-32 justify-evenly pt-2 hidden md:flex">
+      <nav className=" h-32 justify-evenly pt-2 hidden md:flex">
         <figure className="my-auto">
           <img src={srm} alt="SRM Logo" className="max-h-24" />
         </figure>
