@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carouselBox{
+    border-image: url("/src/utils/icons/RectangleBorder.png") 30 ;
+}
