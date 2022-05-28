@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .carouselBox{
-    border-image: url("/src/utils/icons/RectangleBorder.png") 35;
+    border-image: url("/src/utils/icons/RectangleBorder.png") 30 ;
 }
