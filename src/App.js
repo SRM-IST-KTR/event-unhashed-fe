@@ -5,6 +5,7 @@ import Speaker from './components/Speaker/Speaker';
 import About from './components/About/About';
 import {Banner} from './components/Banner';
 import Footer from "./components/footer/footer";
+import Timer from "./components/timer/timer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Speaker />
       <About />
       <Sponsors />
+      <Timer />
       <Footer />
       </body>
     </div>
