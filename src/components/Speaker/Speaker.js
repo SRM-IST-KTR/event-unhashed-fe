@@ -13,10 +13,10 @@ export default function Speaker() {
           <div className="speakerImg">
           ` <img src={speakerImg}></img>
             <div className='speakerMedia'>
-              <a href="https://instagram.com/" target={'_blank'}><i className="fa fa-instagram"></i></a>
-              <a href="https://github.com/" target={'_blank'}><i className="fa fa-brands fa-github"></i></a>
-              <a href="https://twitter.com/" target={'_blank'}><i className="fa fa-brands fa-twitter"></i></a>
-              <a href="https://linked.com/" target={'_blank'}><i className="fa fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/gitaalekhyapaul/?igshid=YmMyMTA2M2Y=" target={'_blank'}><i className="fa fa-instagram"></i></a>
+              <a href="https://github.com/gitaalekhyapaul" target={'_blank'}><i className="fa fa-brands fa-github"></i></a>
+              <a href="https://twitter.com/gitaalekhyapaul" target={'_blank'}><i className="fa fa-brands fa-twitter"></i></a>
+              <a href="https://in.linkedin.com/in/gitaalekhyapaul" target={'_blank'}><i className="fa fa-brands fa-linkedin"></i></a>
             </div>
           </div>
           <p placeholder="SpeakerDetails" className="speakerDetails">
