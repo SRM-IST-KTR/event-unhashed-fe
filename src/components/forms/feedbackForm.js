@@ -7,19 +7,21 @@ const FeedbackForm = () => {
       className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
 flex-col text-white"
     >
-      <div className="w-1/2 lg-w-full flex flex-col justify-center items-center">
-        <FormHeading heading="Feedback Form" />
-        <Input label="Full Name">
+      <form className="md:w-8/12 lg:w-1/2 flex flex-col justify-center items-center" >
+        <FormHeading heading="Event Registration" />
+        <Input label="Full Name" className="">
+          <div className="flex flex-col md:flex-row gap-4 w-full">
           <input
             type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-[47%]"
+            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl md:flex-1"
             placeholder="First Name"
-          />
+            />
           <input
             type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-[47%]"
+            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl md:flex-1"
             placeholder="Last Name"
-          />
+            />
+            </div>
         </Input>
 
         <Input label="Thoughts on the event">
@@ -46,7 +48,7 @@ flex-col text-white"
         <button className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg ">
           Submit
         </button>
-      </div>
+      </form>
     </div>
   );
 };
