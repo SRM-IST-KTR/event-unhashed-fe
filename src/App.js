@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Navbar} from './components/Navbar';
 import { Sponsors } from './components/Sponsors';
@@ -13,10 +12,11 @@ function App() {
       <body>
       <Navbar />
       <Speaker />
+      <About />
       <Sponsors />
       </body>
     </div>
   );
 }
-
+ 
 export default App;
