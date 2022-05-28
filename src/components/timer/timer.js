@@ -5,7 +5,7 @@ const Timer = () => {
   const deadline = new Date("June 5, 2022");
   const isTimeUp = isBefore(deadline, new Date());
   return (
-    <div className="m-12 mx-auto flex flex-col">
+    <section id="register" className="m-12 mx-auto flex flex-col">
       <h2 className="uppercase text-buttontext text-3xl font-bold text-center">
         Registrations
       </h2>
@@ -15,7 +15,7 @@ const Timer = () => {
         </figure>
         <Ticker futureDate={deadline} className="" />
       </div>
-    </div>
+    </section>
   );
 };
 

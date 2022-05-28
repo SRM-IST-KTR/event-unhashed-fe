@@ -6,6 +6,7 @@ import About from './components/About/About';
 import {Banner} from './components/Banner';
 import Footer from "./components/footer/footer";
 import Timer from "./components/timer/timer";
+import { Register } from './components/Register';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <body>
       <Navbar />
       <Banner />
+      <Register />
       <About />
       <Speaker />
       <Sponsors />

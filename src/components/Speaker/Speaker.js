@@ -7,7 +7,7 @@ export default function Speaker() {
     "Gita Alekhya Paul is an undergraduate student at SRMIST, Kattankulathur.He is an MLH Fellowship alumni and contributor to popular repositories like Amazon AWS Amplify and Hoppscotch.Gita is a keen cybersecurity student, and is fond of making and breaking web applications. Ask him about Javascript, APIs, Hacking and Open-source!";
 
   return (
-    <div className="mx-12 md:w-6/12 md:mx-auto">
+    <section id="speakers" className="mx-12 md:w-6/12 md:mx-auto">
       <h2 className="uppercase text-buttontext text-3xl font-bold text-center">
         Speaker
       </h2>
@@ -74,6 +74,6 @@ export default function Speaker() {
           </div>
         </figure>
       </div>
-    </div>
+    </section>
   );
 }

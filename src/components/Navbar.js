@@ -6,15 +6,19 @@ export const Navbar = () => {
   const links = [
     {
       name: "Home",
+      url: "#home",
     },
     {
       name: "About",
+      url: "#about",
     },
     {
       name: "Speakers",
+      url: "#speakers",
     },
     {
       name: "Sponsors",
+      url: "#sponsors",
     },
   ];
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -25,16 +29,18 @@ export const Navbar = () => {
   return (
     <div>
       {/* Table and Desktop Navbar */}
-      <nav className=" h-32 justify-evenly pt-2 hidden md:flex">
+      <nav className=" h-32 justify-evenly pt-2 hidden md:flex ">
         <figure className="my-auto">
           <img src={srm} alt="SRM Logo" className="max-h-24" />
         </figure>
 
         <div className="flex justify-evenly md:space-x-1 lg:space-x-8 mx-8 my-auto">
           {links.map((navBut) => (
-            <button className="bg-buttonbg md:px-8 lg:px-12 pb-1 rounded-lg font-semibold text-buttontext h-10 hover:scale-125 transition-all ">
-              {navBut.name}
-            </button>
+            <a href={navBut.url}>
+              <button className="bg-buttonbg md:px-8 lg:px-12 pb-1 rounded-lg font-semibold text-buttontext h-10 hover:scale-125 transition-all ">
+                {navBut.name}
+              </button>
+            </a>
           ))}
         </div>
 
@@ -74,7 +80,7 @@ export const Navbar = () => {
         <div className="z-50">
           <ul className="flex flex-col gap-8 py-8 text-white mx-auto  absolute top-[6rem] bg-node-black w-full transition-all duration-500 bg-buttonbg">
             {links.map((link) => (
-              <a >
+              <a>
                 <li key={link.name}>
                   <a className="ml-4 text-[#FFFFFF]">{link.name}</a>
                 </li>
