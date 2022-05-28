@@ -16,7 +16,7 @@ export default function Speaker() {
         <figure className="basis-1/5 md:2/5 flex flex-col ">
           <img
             src={speakerImg}
-            className="rounded-full w-44 h-44 mx-auto"
+            className="rounded-full w-44 h-auto mx-auto"
           ></img>
 
           <div className="flex gap-2 mt-2 mx-auto">
