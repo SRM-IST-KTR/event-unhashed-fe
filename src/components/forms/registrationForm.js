@@ -1,4 +1,6 @@
 import Input from "./formInput";
+import styles from "./box.module.css";
+import FormHeading from "./formHeading";
 
 const RegistrationForm = () => {
   return (
@@ -7,19 +9,16 @@ const RegistrationForm = () => {
     flex-col text-white"
     >
       <div className="w-1/2 flex flex-col justify-center items-center">
-        <div className="bg-[#24354F] w-8/12 px-20 rounded-3xl text-3xl shadow-2xl shadow-[#DB00FF] text-center py-10 my-10">
-          Event Registration
-        </div>
-
+        <FormHeading heading="Event Registration" />
         <Input label="Full Name">
           <input
             type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-7/12"
+            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-[47%]"
             placeholder="First Name"
           />
           <input
             type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-7/12"
+            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-[47%]"
             placeholder="Last Name"
           />
         </Input>
@@ -32,20 +31,22 @@ const RegistrationForm = () => {
           />
         </Input>
 
-        <div className="w-full flex flex-col justify-center items-center ">
-          <div>For students of SRMIST</div>
-          <Input label="Registration Number">
-            <input
-              type="text"
-              className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-7/12"
-            />
-          </Input>
-          <Input label="Department (with specialisation)">
-            <input
-              type="text"
-              className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-7/12"
-            />
-          </Input>
+        <div className={`w-full m-10 ${styles.border}`}>
+          <div className="w-full flex flex-col justify-center items-center p-10">
+            <div className="text-2xl font-semibold">For students of SRMIST</div>
+            <Input label="Registration Number">
+              <input
+                type="text"
+                className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-full"
+              />
+            </Input>
+            <Input label="Department (with specialisation)">
+              <input
+                type="text"
+                className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-full"
+              />
+            </Input>
+          </div>
         </div>
 
         <Input label="Year of graduation">
