@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Navbar} from './components/Navbar';
 import { Sponsors } from './components/Sponsors';
+import Speaker from './components/Speaker/Speaker';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <body>
       <Navbar />
+      <Speaker />
       <Sponsors />
       </body>
     </div>
