@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.carouselBox{
+.gradientBox{
+    border-width: 20px;
+    border-radius: 28px;
     border-image: url("/src/utils/icons/RectangleBorder.png") 30 ;
 }

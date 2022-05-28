@@ -2,6 +2,7 @@ import './App.css';
 import {Navbar} from './components/Navbar';
 import { Sponsors } from './components/Sponsors';
 import Speaker from './components/Speaker/Speaker';
+import About from './components/About/About';
 
 function App() {
   return (

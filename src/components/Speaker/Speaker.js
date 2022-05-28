@@ -4,7 +4,7 @@ import "./Speaker.css";
 
 export default function Speaker() {
   const aboutSpeaker =
-    "Gita Alekhya Paul is an undergraduate student at SRMIST,Kattankulathur.He is an MLH Fellowship alumni and contributor to popular repositories like Amazon AWS Amplify and Hoppscotch.Gita is a keen cybersecurity student, and is fond of making and breaking web applications. Ask him about Javascript, APIs, Hacking and Open-source!";
+    "Gita Alekhya Paul is an undergraduate student at SRMIST, Kattankulathur.He is an MLH Fellowship alumni and contributor to popular repositories like Amazon AWS Amplify and Hoppscotch.Gita is a keen cybersecurity student, and is fond of making and breaking web applications. Ask him about Javascript, APIs, Hacking and Open-source!";
 
   return (
     <div className="mx-12 md:w-6/12 md:mx-auto">
@@ -13,7 +13,6 @@ export default function Speaker() {
       </h2>
 
       <div className="hidden flex-row gap-4 mt-8 md:flex">
-
         <figure className="basis-1/5 md:2/5 flex flex-col ">
           <img
             src={speakerImg}
@@ -39,23 +38,22 @@ export default function Speaker() {
           </div>
         </figure>
 
-        <p className="text-[#fff] text-lg md:3/5 lg:basis-3/5 font-[Montserrat] font-semibold">
-          {aboutSpeaker}
-        </p>
+        <p placeholder="aboutDetails" className="aboutSpeaker">
+              {aboutSpeaker}
+          </p>
       </div>
 
       {/* Mobile Layout */}
       <div className="flex flex-col gap-4 mt-8 md:hidden">
-
         <figure className="flex flex-col gap-4">
           <img
             src={speakerImg}
             className="rounded-full w-44 h-44 mx-auto"
           ></img>
 
-          <p className="text-[#fff] text-lg font-[Montserrat] font-semibold text-center">
-          {aboutSpeaker}
-        </p>
+          <p placeholder="aboutDetails" className="aboutSpeaker">
+            {aboutSpeaker}
+          </p>
 
           <div className="flex gap-2 mt-2 mx-auto">
             <a href="https://instagram.com/" target={"_blank"}>
@@ -75,8 +73,6 @@ export default function Speaker() {
             </a>
           </div>
         </figure>
-
-        
       </div>
     </div>
   );

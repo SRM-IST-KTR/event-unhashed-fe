@@ -6,7 +6,7 @@ export default class DemoCarousel extends Component {
     render() {
         return (
             <Carousel renderThumbs={ (children) => ""} width={"30%"} className="">
-                <figure className='flex flex-col m-8 border-[20px] rounded-[28px] carouselBox bg-[#FFF]'>
+                <figure className='flex flex-col m-8 gradientBox bg-[#FFF]'>
                 <img src="http://levelupcollege.com/wp-content/uploads/2021/10/codedamn-logo-with-text-1.png" alt="GCSRM Logo" className="h-32" />
                     <p className='m-8 text-xl font-semibold'>
                     Build projects, practice and learn to code from scratch - without leaving your browser.
