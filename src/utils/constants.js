@@ -1,32 +1,5 @@
 export const newRegistrationInputs = [
   {
-    label: "Contact Number",
-    id: "contactNumber",
-    type: "text",
-    width: "w-7/12",
-    placeholder: "Contact Number",
-    required: true,
-    description: "As per your ID card",
-  },
-  {
-    label: "Registration Number",
-    id: "regNumber",
-    type: "text",
-    width: "w-full",
-    placeholder: "",
-    required: true,
-    description: "As per your ID card",
-  },
-  {
-    label: "Department (with specialisation)",
-    id: "department",
-    type: "text",
-    width: "w-full",
-    placeholder: "",
-    required: true,
-    description: "As per your ID card",
-  },
-  {
     label: "Year of graduation",
     id: "year",
     type: "text",

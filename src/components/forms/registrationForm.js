@@ -1,7 +1,5 @@
-import Input from "./nameInput";
 import styles from "./box.module.css";
 import FormHeading from "./formHeading";
-import { useState } from "react";
 import FormInput from "./formInputs";
 import { newNameInput, newRegistrationInputs } from "../../utils/constants";
 
@@ -56,38 +54,15 @@ const RegistrationForm = () => {
               })}
             </div>
           </div>
-          {newRegistrationInputs.map((el, i) => {
-            return (
-              <FormInput
-                id={el.id}
-                name={el.id}
-                key={el.id}
-                label={el.label}
-                type={el.type}
-                handleChange={formik.handleChange}
-                value={formik.values[i]}
-                placeholder={el.placeholder}
-                width={el.width}
-              />
-            );
-          })}
-
-          {/* <Input label="Full Name">
-            <input
-              type="text"
-              className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-[47%]"
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-[47%]"
-              placeholder="Last Name"
-            />
-          </Input>
 
           <FormInput
+            id="contactNumber"
+            name="contactNumber"
+            key="contactNumber"
             label="Contact Number"
             type="text"
+            handleChange={formik.handleChange}
+            value={formik.values.contactNumber}
             placeholder="Contact Number"
             width="w-7/12"
           />
@@ -97,41 +72,46 @@ const RegistrationForm = () => {
               <div className="text-2xl font-semibold">
                 For students of SRMIST
               </div>
-              <Input label="Registration Number">
-                <input
-                  type="text"
-                  className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-full"
-                />
-              </Input>
-              <Input label="Department (with specialisation)">
-                <input
-                  type="text"
-                  className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-full"
-                />
-              </Input>
+              <FormInput
+                id="regNumber"
+                name="regNumber"
+                key="regNumber"
+                label="Registration Number"
+                type="text"
+                handleChange={formik.handleChange}
+                value={formik.values.regNumber}
+                placeholder=""
+                width="w-full"
+              />
+              <FormInput
+                id="department"
+                name="department"
+                key="department"
+                label="Department (with specialisation)"
+                type="text"
+                handleChange={formik.handleChange}
+                value={formik.values.department}
+                placeholder=""
+                width="w-full"
+              />
             </div>
           </div>
 
-          <Input label="Year of graduation">
-            <input
-              type="text"
-              className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-4/12"
-            />
-          </Input>
-
-          <Input label="College email-id">
-            <input
-              type="text"
-              className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-7/12"
-            />
-          </Input>
-
-          <Input label="Where did you hear about the event">
-            <input
-              type="text"
-              className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-7/12"
-            />
-          </Input> */}
+          {newRegistrationInputs.map((el, i) => {
+            return (
+              <FormInput
+                id={el.id}
+                name={el.id}
+                key={el.id}
+                label={el.label}
+                type={el.type}
+                handleChange={formik.handleChange}
+                value={formik.values[i + 5]}
+                placeholder={el.placeholder}
+                width={el.width}
+              />
+            );
+          })}
 
           <button
             className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg "
