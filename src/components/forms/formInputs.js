@@ -17,7 +17,9 @@ const FormInput = (props) => {
         />
       </div>
 
-      {props.error ? <div className="text-[#ff0000]">{props.error}</div> : null}
+      {props.error ? (
+        <div className="text-[#ff0000] text-lg pt-3">{props.error}</div>
+      ) : null}
     </div>
   );
 };

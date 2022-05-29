@@ -28,15 +28,20 @@ const RegistrationForm = () => {
       info: "",
     },
     validationSchema: Yup.object().shape({
-      firstName: Yup.string().required("Required"),
+      firstName: Yup.string().trim().required("Required"),
       lastName: Yup.string().required("Required"),
-      contactNumber: Yup.number()
-        .required("Required")
-        .integer("The entered value should be a number"),
-      regNumber: srmStudent ? Yup.string().required("Required") : Yup.string(),
-      department: srmStudent ? Yup.string().required("Required") : Yup.string(),
-      year: Yup.number().required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
+      contactNumber: Yup.number().min(10).required("Required"),
+      regNumber: srmStudent
+        ? Yup.string().required("Required")
+        : Yup.string().trim(),
+      department: srmStudent
+        ? Yup.string().required("Required")
+        : Yup.string().trim(),
+      year: Yup.number().min(4).required("Required"),
+      email: Yup.string()
+        .trim()
+        .email("Invalid email address")
+        .required("Required"),
       info: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
