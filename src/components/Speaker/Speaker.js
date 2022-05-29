@@ -5,19 +5,39 @@ import "./Speaker.css";
 
 export default function Speaker() {
   const aboutSpeaker = (
-    
-      <p className="aboutSpeaker text-left">
-        Gita Alekhya Paul is an undergraduate student at SRMIST,
-        Kattankulathur.He is an{" "}
-        <a href="https://fellowship.mlh.io/" target={"_blank"} rel="noreferrer" className="text-buttonbg">
-          MLH Fellowship
-        </a>{" "}
-        alumni and contributor to popular repositories like Amazon AWS Amplify
-        and Hoppscotch.Gita is a keen cybersecurity student, and is fond of
-        making and breaking web applications. Ask him about Javascript, APIs,
-        Hacking and Open-source!
-      </p>
-    
+    <p className="aboutSpeaker text-left">
+      Gita Alekhya Paul is an undergraduate student at SRMIST, Kattankulathur.He
+      is an{" "}
+      <a
+        href="https://fellowship.mlh.io/"
+        target={"_blank"}
+        rel="noreferrer"
+        className="text-buttontext"
+      >
+        MLH Fellowship
+      </a>{" "}
+      alumni and contributor to popular repositories like{" "}
+      <a
+        href="https://aws.amazon.com/amplify/"
+        target={"_blank"}
+        rel="noreferrer"
+        className="text-buttontext"
+      >
+        Amazon AWS Amplify
+      </a>{" "}
+      and {" "}
+      <a
+        href="https://hoppscotch.io/"
+        target={"_blank"}
+        rel="noreferrer"
+        className="text-buttontext"
+      >
+      Hoppscotch
+      </a>
+      . Gita is a keen cybersecurity student, and is fond of making
+      and breaking web applications. Ask him about Javascript, APIs, Hacking and
+      Open-source!
+    </p>
   );
   return (
     <section id="speakers" className="mx-12 md:w-6/12 md:mx-auto">

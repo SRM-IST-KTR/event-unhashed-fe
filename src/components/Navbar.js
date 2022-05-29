@@ -1,5 +1,6 @@
 import srm from "../utils/icons/srm.png";
 import gcsrmLogo from "../utils/icons/gcsrmLogo.png";
+import { UnhashedLogo } from "../utils/icons/UnhashedLogo";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -37,7 +38,7 @@ export const Navbar = () => {
         <div className="flex justify-evenly md:space-x-1 lg:space-x-8 mx-8 my-auto">
           {links.map((navBut) => (
             <a href={navBut.url}>
-              <button className="bg-buttonbg md:px-8 lg:px-12 pb-1 rounded-lg font-semibold text-buttontext h-10 hover:scale-125 transition-all ">
+              <button className="bg-buttonbg md:px-8 lg:px-12 rounded-lg font-semibold text-buttontext h-10 hover:scale-125 transition-all ">
                 {navBut.name}
               </button>
             </a>
