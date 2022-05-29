@@ -33,8 +33,8 @@ const RegistrationForm = () => {
       contactNumber: Yup.number()
         .required("Required")
         .integer("The entered value should be a number"),
-      regNumber: Yup.string().required("Required"),
-      department: Yup.string().required("Required"),
+      regNumber: srmStudent ? Yup.string().required("Required") : Yup.string(),
+      department: srmStudent ? Yup.string().required("Required") : Yup.string(),
       year: Yup.number().required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
       info: Yup.string().required("Required"),
@@ -43,7 +43,6 @@ const RegistrationForm = () => {
       console.log(values);
     },
   });
-  console.log(formik.errors);
   return (
     <form onSubmit={formik.handleSubmit}>
       <div
