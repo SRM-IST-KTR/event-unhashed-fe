@@ -16,6 +16,8 @@ const FormInput = (props) => {
           placeholder={props.placeholder}
         />
       </div>
+
+      {props.error ? <div className="text-[#ff0000]">{props.error}</div> : null}
     </div>
   );
 };

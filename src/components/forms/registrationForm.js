@@ -3,7 +3,7 @@ import FormHeading from "./formHeading";
 import FormInput from "./formInputs";
 import { newNameInput, newRegistrationInputs } from "../../utils/constants";
 
-import { useFormik } from "formik";
+import { ErrorMessage, useFormik } from "formik";
 import NameInput from "./nameInput";
 
 import * as Yup from "yup";
@@ -27,11 +27,13 @@ const RegistrationForm = () => {
       email: "",
       info: "",
     },
-    validationSchema: Yup.object({
+    validationSchema: Yup.object().shape({
       firstName: Yup.string().required("Required"),
       lastName: Yup.string().required("Required"),
-      contactNumber: Yup.number().required("Required"),
-      regNumber: Yup.number().required("Required"),
+      contactNumber: Yup.number()
+        .required("Required")
+        .integer("The entered value should be a number"),
+      regNumber: Yup.string().required("Required"),
       department: Yup.string().required("Required"),
       year: Yup.number().required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -41,7 +43,7 @@ const RegistrationForm = () => {
       console.log(values);
     },
   });
-
+  console.log(formik.errors);
   return (
     <form onSubmit={formik.handleSubmit}>
       <div
@@ -68,6 +70,7 @@ const RegistrationForm = () => {
                     value={formik.values[i]}
                     placeholder={el.placeholder}
                     width={el.width}
+                    error={formik.errors[el.id]}
                   />
                 );
               })}
@@ -84,11 +87,8 @@ const RegistrationForm = () => {
             value={formik.values.contactNumber}
             placeholder="Contact Number"
             width="w-7/12"
+            error={formik.errors.contactNumber}
           />
-
-          {formik.touched.contactNumber && formik.errors.contactNumber ? (
-            <div>{formik.errors.email}</div>
-          ) : null}
 
           <div className={`w-full m-10 ${styles.border}`}>
             <div className="w-full flex flex-col justify-center items-center p-10">
@@ -98,6 +98,7 @@ const RegistrationForm = () => {
                   value="SRM Student"
                   checked={srmStudent}
                   onClick={radioButtonChangeHandler}
+                  onChange={radioButtonChangeHandler}
                   className="w-[20px] h-[20px] mr-5 bg-[#312658]"
                 />{" "}
                 For students of SRMIST
@@ -112,6 +113,7 @@ const RegistrationForm = () => {
                     type="text"
                     handleChange={formik.handleChange}
                     value={formik.values.regNumber}
+                    error={formik.errors.regNumber}
                     placeholder=""
                     width="w-full"
                   />
@@ -123,6 +125,7 @@ const RegistrationForm = () => {
                     type="text"
                     handleChange={formik.handleChange}
                     value={formik.values.department}
+                    error={formik.errors.department}
                     placeholder=""
                     width="w-full"
                   />
@@ -144,6 +147,7 @@ const RegistrationForm = () => {
                 handleChange={formik.handleChange}
                 value={formik.values[i + 5]}
                 placeholder={el.placeholder}
+                error={formik.errors[el.id]}
                 width={el.width}
               />
             );
