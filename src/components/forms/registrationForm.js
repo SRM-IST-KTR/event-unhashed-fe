@@ -2,7 +2,7 @@ import styles from "./box.module.css";
 import FormHeading from "./formHeading";
 import FormInput from "./formInputs";
 import { newNameInput, newRegistrationInputs } from "../../utils/constants";
-import { toast} from "react-toastify"
+import { toast } from "react-toastify";
 
 import { useFormik } from "formik";
 import NameInput from "./nameInput";
@@ -12,6 +12,7 @@ import { useState } from "react";
 
 const RegistrationForm = () => {
   const [srmStudent, setSrmStudent] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const radioButtonChangeHandler = () => {
     setSrmStudent(!srmStudent);
@@ -32,14 +33,14 @@ const RegistrationForm = () => {
       firstName: Yup.string().required("Required"),
       lastName: Yup.string().required("Required"),
       contactNumber: Yup.number().required("Required"),
-      regNumber: Yup.number().required("Required"),
+      regNumber: Yup.string().required("Required"),
       department: Yup.string().required("Required"),
       year: Yup.number().required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
       info: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
-      toast.success('Registered Successfully! See you soon🥰.', {
+      toast.success("Registered Successfully! See you soon🥰.", {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -47,7 +48,7 @@ const RegistrationForm = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        });
+      });
       console.log(values);
     },
   });
@@ -158,13 +159,22 @@ const RegistrationForm = () => {
               />
             );
           })}
-
-          <button
-            className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg "
-            type="submit"
-          >
-            Submit
-          </button>
+          {isSubmitting ? (
+            <button
+              className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg "
+              type="submit"
+              disabled
+            >
+              Submit
+            </button>
+          ) : (
+            <button
+              className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg "
+              type="submit"
+            >
+              Submit
+            </button>
+          )}
         </div>
       </div>
     </form>
