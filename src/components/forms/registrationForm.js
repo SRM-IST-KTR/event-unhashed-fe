@@ -12,7 +12,7 @@ const RegistrationForm = () => {
 
   return (
     <div
-      className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
+      className=" flex justify-center items-center 
     flex-col text-white"
     >
       <form className="md:w-8/12 lg:w-1/2 flex flex-col justify-center items-center" onSubmit={handleSubmit}>

@@ -7,6 +7,7 @@ import {Banner} from './components/Banner';
 import Footer from "./components/footer/footer";
 import Timer from "./components/timer/timer";
 import { Register } from './components/Register';
+import Forms from './components/forms/forms';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Speaker />
       <Sponsors />
       <Timer />
+      <Forms />
       <Footer />
       </body>
     </div>
