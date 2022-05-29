@@ -5,6 +5,8 @@ import NameInput from "./nameInput";
 import { newNameInput, newFeedbackInput } from "../../utils/constants";
 import {toast} from "react-toastify"
 
+import * as Yup from "yup";
+
 const FeedbackForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -14,6 +16,13 @@ const FeedbackForm = () => {
       recommendations: "",
       experience: "",
     },
+    validationSchema: Yup.object().shape({
+      firstName: Yup.string().required("Required"),
+      lastName: Yup.string().required("Required"),
+      thoughts: Yup.string().required("Required"),
+      recommendations: Yup.string().required("Required"),
+      experience: Yup.string().required("Required"),
+    }),
     onSubmit: (values) => {
       toast.success('Thank You for your Feedback🥰.', {
         position: "top-center",
@@ -71,6 +80,7 @@ flex-col text-white"
                 value={formik.values[i + 2]}
                 placeholder={el.placeholder}
                 width={el.width}
+                error={formik.errors[el.id]}
               />
             );
           })}
