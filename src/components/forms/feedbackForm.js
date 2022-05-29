@@ -8,7 +8,7 @@ const FeedbackForm = () => {
 flex-col text-white"
     >
       <form className="md:w-8/12 lg:w-1/2 flex flex-col justify-center items-center" >
-        <FormHeading heading="Event Registration" />
+        <FormHeading heading="Feedback Form" />
         <Input label="Full Name" className="">
           <div className="flex flex-col md:flex-row gap-4 w-full">
           <input

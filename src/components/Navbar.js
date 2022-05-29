@@ -79,10 +79,10 @@ export const Navbar = () => {
       {navbarOpen && (
         <div className="z-50">
           <ul className="flex flex-col gap-8 py-8 text-white mx-auto  absolute top-[6rem] bg-node-black w-full transition-all duration-500 bg-buttonbg">
-            {links.map((link) => (
-              <a>
-                <li key={link.name}>
-                  <a className="ml-4 text-[#FFFFFF]">{link.name}</a>
+            {links.map((navBut) => (
+              <a key={navBut.name} className="ml-4 text-[#FFFFFF]" href={navBut.url}>
+                <li >
+                  {navBut.name}
                 </li>
               </a>
             ))}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import speakerImg from "../../assets/Gita.png";
 import "./Speaker.css";
 
@@ -17,23 +17,24 @@ export default function Speaker() {
           <img
             src={speakerImg}
             className="rounded-full w-44 h-auto mx-auto"
+            alt="Speaker"
           ></img>
 
           <div className="flex gap-2 mt-2 mx-auto">
-            <a href="https://instagram.com/" target={"_blank"}>
-              <i className="fa fa-instagram fa-2x"></i>
+            <a href="https://instagram.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-brands fa-instagram fa-3x"></i>
             </a>
 
-            <a href="https://github.com/" target={"_blank"}>
-              <i className="fa fa-brands fa-github fa-2x"></i>
+            <a href="https://github.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-brands fa-github fa-3x"></i>
             </a>
 
-            <a href="https://twitter.com/" target={"_blank"}>
-              <i className="fa fa-brands fa-twitter fa-2x"></i>
+            <a href="https://twitter.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-brands fa-twitter fa-3x"></i>
             </a>
 
-            <a href="https://linked.com/" target={"_blank"}>
-              <i className="fa fa-brands fa-linkedin fa-2x"></i>
+            <a href="https://linked.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-brands fa-linkedin fa-3x"></i>
             </a>
           </div>
         </figure>
@@ -49,6 +50,7 @@ export default function Speaker() {
           <img
             src={speakerImg}
             className="rounded-full w-44 h-44 mx-auto"
+            alt="Speaker"
           ></img>
 
           <p placeholder="aboutDetails" className="aboutSpeaker">
@@ -56,20 +58,20 @@ export default function Speaker() {
           </p>
 
           <div className="flex gap-2 mt-2 mx-auto">
-            <a href="https://instagram.com/" target={"_blank"}>
-              <i className="fa fa-instagram fa-2x"></i>
+            <a href="https://instagram.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-instagram fa-3x"></i>
             </a>
 
-            <a href="https://github.com/" target={"_blank"}>
-              <i className="fa fa-brands fa-github fa-2x"></i>
+            <a href="https://github.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-brands fa-github fa-3x"></i>
             </a>
 
-            <a href="https://twitter.com/" target={"_blank"}>
-              <i className="fa fa-brands fa-twitter fa-2x"></i>
+            <a href="https://twitter.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-brands fa-twitter fa-3x"></i>
             </a>
 
-            <a href="https://linked.com/" target={"_blank"}>
-              <i className="fa fa-brands fa-linkedin fa-2x"></i>
+            <a href="https://linked.com/" target={"_blank"} rel="noreferrer">
+              <i className="fa fa-brands fa-linkedin fa-3x"></i>
             </a>
           </div>
         </figure>

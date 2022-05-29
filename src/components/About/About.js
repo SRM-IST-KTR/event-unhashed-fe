@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './About.css';
 import { Location } from '../../utils/icons/Location';
 import { Calendar } from '../../utils/icons/Calendar';
