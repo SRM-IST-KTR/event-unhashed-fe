@@ -20,8 +20,8 @@ export const Ticker = ({ futureDate }) => {
         </>
     );
 
-    return (
-        <div className={`${ style.tickerShell } gradientBox`}>
+    return (             
+        <div className={`flex mx-auto my-auto p-8  gradientBox`}>
             { tickerContents }           
         </div>              
     );

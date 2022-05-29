@@ -1,5 +1,3 @@
-import style from './TickerSeparator.module.scss';
-
 export const TickerSeparator = () => {
-    return <div className={ style.separator }>:</div>;
+    return <div className="text-5xl md:text-7xl lg:text-9xl text-[#fff]">:</div>;
 }
