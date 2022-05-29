@@ -11,6 +11,8 @@ import { newNameInput, newQueriesInput } from "../../utils/constants";
 import FormInput from "./formInputs";
 import NameInput from "./nameInput";
 
+import * as Yup from "yup";
+
 const QueriesForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -19,6 +21,12 @@ const QueriesForm = () => {
       doubt: "",
       email: "",
     },
+    validationSchema: Yup.object().shape({
+      firstName: Yup.string().required("Required"),
+      lastName: Yup.string().required("Required"),
+      doubt: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+    }),
     onSubmit: (values) => {
       console.log(values);
     },
@@ -67,6 +75,7 @@ flex-col text-white"
                 value={formik.values[i]}
                 placeholder={el.placeholder}
                 width={el.width}
+                error={formik.errors[el.id]}
               />
             );
           })}

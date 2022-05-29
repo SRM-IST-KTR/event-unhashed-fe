@@ -3,7 +3,7 @@ import FormHeading from "./formHeading";
 import FormInput from "./formInputs";
 import { newNameInput, newRegistrationInputs } from "../../utils/constants";
 
-import { ErrorMessage, useFormik } from "formik";
+import { useFormik } from "formik";
 import NameInput from "./nameInput";
 
 import * as Yup from "yup";
