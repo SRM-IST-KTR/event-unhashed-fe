@@ -3,6 +3,7 @@ import FormHeading from "./formHeading";
 import FormInput from "./formInputs";
 import { newNameInput, newRegistrationInputs } from "../../utils/constants";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 import { ErrorMessage, useFormik } from "formik";
 import NameInput from "./nameInput";
@@ -41,7 +42,27 @@ const RegistrationForm = () => {
       email: Yup.string().email("Invalid email address").required("Required"),
       info: Yup.string().required("Required"),
     }),
+
+    
+
     onSubmit: (values) => {
+      try{
+
+        axios.post("http://bd8b-157-51-51-159.in.ngrok.io/api/v1/registration/register", {
+            name: `${values.firstName} ${values.lastName}`,
+            email: `${values.email}`,
+            phone: `${values.contactNumber}`,
+            yearOfGrad: `${values.year}`,
+            regNo: `${values.regNumber}`,
+            department: `${values.department}`
+          
+        }, {
+          'Content-Type': 'application/x-www-form-urlencoded' ,
+
+          
+        }).then((response) => {
+          console.log(response);
+        } );
       toast.success("Registered Successfully! See you soon🥰.", {
         position: "top-center",
         autoClose: 5000,
@@ -52,6 +73,10 @@ const RegistrationForm = () => {
         progress: undefined,
       });
       console.log(values);
+    }
+    catch (err) {
+      console.log(err);
+    }
     },
   });
   return (
