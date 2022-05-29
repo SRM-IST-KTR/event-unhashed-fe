@@ -7,7 +7,16 @@ import { toast} from "react-toastify"
 import { useFormik } from "formik";
 import NameInput from "./nameInput";
 
+import * as Yup from "yup";
+import { useState } from "react";
+
 const RegistrationForm = () => {
+  const [srmStudent, setSrmStudent] = useState(true);
+
+  const radioButtonChangeHandler = () => {
+    setSrmStudent(!srmStudent);
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -19,6 +28,16 @@ const RegistrationForm = () => {
       email: "",
       info: "",
     },
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("Required"),
+      lastName: Yup.string().required("Required"),
+      contactNumber: Yup.number().required("Required"),
+      regNumber: Yup.number().required("Required"),
+      department: Yup.string().required("Required"),
+      year: Yup.number().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      info: Yup.string().required("Required"),
+    }),
     onSubmit: (values) => {
       toast.success('Registered Successfully! See you soon🥰.', {
         position: "top-center",
@@ -77,33 +96,50 @@ const RegistrationForm = () => {
             width="w-full md:w-6/12"
           />
 
+          {formik.touched.contactNumber && formik.errors.contactNumber ? (
+            <div>{formik.errors.email}</div>
+          ) : null}
+
           <div className={`w-full m-10 ${styles.border}`}>
             <div className="w-full flex flex-col justify-center items-center p-10">
               <div className="text-2xl font-semibold">
+                <input
+                  type="radio"
+                  value="SRM Student"
+                  checked={srmStudent}
+                  onClick={radioButtonChangeHandler}
+                  className="w-[20px] h-[20px] mr-5 bg-[#312658]"
+                />{" "}
                 For students of SRMIST
               </div>
-              <FormInput
-                id="regNumber"
-                name="regNumber"
-                key="regNumber"
-                label="Registration Number"
-                type="text"
-                handleChange={formik.handleChange}
-                value={formik.values.regNumber}
-                placeholder="RA***************"
-                width="w-full"
-              />
-              <FormInput
-                id="department"
-                name="department"
-                key="department"
-                label="Department (with specialisation)"
-                type="text"
-                handleChange={formik.handleChange}
-                value={formik.values.department}
-                placeholder=""
-                width="w-full"
-              />
+              {srmStudent ? (
+                <>
+                  <FormInput
+                    id="regNumber"
+                    name="regNumber"
+                    key="regNumber"
+                    label="Registration Number"
+                    type="text"
+                    handleChange={formik.handleChange}
+                    value={formik.values.regNumber}
+                    placeholder=""
+                    width="w-full"
+                  />
+                  <FormInput
+                    id="department"
+                    name="department"
+                    key="department"
+                    label="Department (with specialisation)"
+                    type="text"
+                    handleChange={formik.handleChange}
+                    value={formik.values.department}
+                    placeholder=""
+                    width="w-full"
+                  />
+                </>
+              ) : (
+                ""
+              )}
             </div>
           </div>
 
