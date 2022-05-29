@@ -2,6 +2,7 @@ import styles from "./box.module.css";
 import FormHeading from "./formHeading";
 import FormInput from "./formInputs";
 import { newNameInput, newRegistrationInputs } from "../../utils/constants";
+import { toast} from "react-toastify"
 
 import { useFormik } from "formik";
 import NameInput from "./nameInput";
@@ -19,6 +20,15 @@ const RegistrationForm = () => {
       info: "",
     },
     onSubmit: (values) => {
+      toast.success('Registered Successfully! See you soon🥰.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
       console.log(values);
     },
   });
@@ -26,17 +36,17 @@ const RegistrationForm = () => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div
-        className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
+        className="text-[#fff] flex justify-center items-center 
   flex-col text-white"
       >
-        <div className="w-1/2 flex flex-col justify-center items-center">
+        <div className="mx-8 md:mx-0 md:w-1/2 flex flex-col justify-center items-center">
           <FormHeading heading="Event Registration" />
           <div className="w-full">
             <div className="text-xl py-4">
               Full Name
               <span className="text-[#ff0000]"> *</span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row gap-4">
               {newNameInput.map((el, i) => {
                 return (
                   <NameInput
@@ -48,7 +58,7 @@ const RegistrationForm = () => {
                     handleChange={formik.handleChange}
                     value={formik.values[i]}
                     placeholder={el.placeholder}
-                    width={el.width}
+                    width="w-full md:w-6/12"
                   />
                 );
               })}
@@ -64,7 +74,7 @@ const RegistrationForm = () => {
             handleChange={formik.handleChange}
             value={formik.values.contactNumber}
             placeholder="Contact Number"
-            width="w-7/12"
+            width="w-full md:w-6/12"
           />
 
           <div className={`w-full m-10 ${styles.border}`}>
@@ -80,7 +90,7 @@ const RegistrationForm = () => {
                 type="text"
                 handleChange={formik.handleChange}
                 value={formik.values.regNumber}
-                placeholder=""
+                placeholder="RA***************"
                 width="w-full"
               />
               <FormInput

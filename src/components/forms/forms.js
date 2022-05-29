@@ -15,7 +15,10 @@ const Forms = () => {
           <FeedbackForm />
           ) :
           (
+            <div>
           <RegistrationForm />
+          <QueriesForm />
+          </div>
         )
       }
     </div>

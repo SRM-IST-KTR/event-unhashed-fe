@@ -7,7 +7,7 @@ export default function About() {
   const about = 'Getting acquainted with emerging technologies is one of the ways to move ahead of your competitors, and Blockchain is at the top. GitHub Community SRM presents UNHASHED: Demystifying The Blockchain,a hands-on session superinteded by industry professionals, aimed at providing knowledge for better understanding, and developing Smart Contracts based on Zilliqa';
 
   return ( 
-    <section className=" flex flex-col mx-12 md:w-6/12 md:mx-auto gradientBox my-16 " id='about'>
+    <section className=" flex flex-col mx-8 md:w-6/12 md:mx-auto gradientBox my-16 " id='about'>
       <h2 className="uppercase text-buttontext text-3xl font-bold text-center">
         About
       </h2>

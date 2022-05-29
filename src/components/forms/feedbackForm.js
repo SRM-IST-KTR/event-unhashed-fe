@@ -3,6 +3,7 @@ import FormInput from "./formInputs";
 import { useFormik } from "formik";
 import NameInput from "./nameInput";
 import { newNameInput, newFeedbackInput } from "../../utils/constants";
+import {toast} from "react-toastify"
 
 const FeedbackForm = () => {
   const formik = useFormik({
@@ -14,6 +15,15 @@ const FeedbackForm = () => {
       experience: "",
     },
     onSubmit: (values) => {
+      toast.success('Thank You for your Feedback🥰.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
       console.log(values);
     },
   });
