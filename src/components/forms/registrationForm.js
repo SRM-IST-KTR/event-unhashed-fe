@@ -6,6 +6,8 @@ import { newNameInput, newRegistrationInputs } from "../../utils/constants";
 import { useFormik } from "formik";
 import NameInput from "./nameInput";
 
+import * as Yup from "yup";
+
 const RegistrationForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -18,6 +20,16 @@ const RegistrationForm = () => {
       email: "",
       info: "",
     },
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("Required"),
+      lastName: Yup.string().required("Required"),
+      contactNumber: Yup.number().required("Required"),
+      regNumber: Yup.number().required("Required"),
+      department: Yup.string().required("Required"),
+      year: Yup.number().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      info: Yup.string().required("Required"),
+    }),
     onSubmit: (values) => {
       console.log(values);
     },
@@ -66,6 +78,10 @@ const RegistrationForm = () => {
             placeholder="Contact Number"
             width="w-7/12"
           />
+
+          {formik.touched.contactNumber && formik.errors.contactNumber ? (
+            <div>{formik.errors.email}</div>
+          ) : null}
 
           <div className={`w-full m-10 ${styles.border}`}>
             <div className="w-full flex flex-col justify-center items-center p-10">
