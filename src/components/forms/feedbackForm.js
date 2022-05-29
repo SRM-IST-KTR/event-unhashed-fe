@@ -1,55 +1,78 @@
 import FormHeading from "./formHeading";
-import Input from "./formInput";
+import FormInput from "./formInputs";
+import { useFormik } from "formik";
+import NameInput from "./nameInput";
+import { newNameInput, newFeedbackInput } from "../../utils/constants";
 
 const FeedbackForm = () => {
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      thoughts: "",
+      recommendations: "",
+      experience: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+
   return (
-    <div
-      className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
+    <form onSubmit={formik.handleSubmit}>
+      <div
+        className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
 flex-col text-white"
-    >
-      <form className="md:w-8/12 lg:w-1/2 flex flex-col justify-center items-center" >
-        <FormHeading heading="Feedback Form" />
-        <Input label="Full Name" className="">
-          <div className="flex flex-col md:flex-row gap-4 w-full">
-          <input
-            type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl md:flex-1"
-            placeholder="First Name"
-            />
-          <input
-            type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl md:flex-1"
-            placeholder="Last Name"
-            />
+      >
+        <div className="w-1/2 lg-w-full flex flex-col justify-center items-center">
+          <FormHeading heading="Feedback Form" />
+          <div className="w-full">
+            <div className="text-xl py-4">
+              Full Name
+              <span className="text-[#ff0000]"> *</span>
             </div>
-        </Input>
-
-        <Input label="Thoughts on the event">
-          <input
-            type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-full h-24"
-          />
-        </Input>
-
-        <Input label="Recommendations">
-          <input
-            type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-full"
-          />
-        </Input>
-
-        <Input label="Experience gained from the event">
-          <input
-            type="text"
-            className="mr-1 py-3 pl-5 text-lg text-black rounded-2xl w-full"
-          />
-        </Input>
-
-        <button className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg ">
-          Submit
-        </button>
-      </form>
-    </div>
+            <div className="flex justify-between">
+              {newNameInput.map((el, i) => {
+                return (
+                  <NameInput
+                    id={el.id}
+                    name={el.id}
+                    key={el.id}
+                    label={el.label}
+                    type={el.type}
+                    handleChange={formik.handleChange}
+                    value={formik.values[i]}
+                    placeholder={el.placeholder}
+                    width={el.width}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          {newFeedbackInput.map((el, i) => {
+            return (
+              <FormInput
+                id={el.id}
+                name={el.id}
+                key={el.id}
+                label={el.label}
+                type={el.type}
+                handleChange={formik.handleChange}
+                value={formik.values[i + 2]}
+                placeholder={el.placeholder}
+                width={el.width}
+              />
+            );
+          })}
+          <button
+            className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg "
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
   );
 };
 
