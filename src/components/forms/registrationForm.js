@@ -4,7 +4,7 @@ import FormInput from "./formInputs";
 import { newNameInput, newRegistrationInputs } from "../../utils/constants";
 import { toast } from "react-toastify";
 
-import { useFormik } from "formik";
+import { ErrorMessage, useFormik } from "formik";
 import NameInput from "./nameInput";
 
 import * as Yup from "yup";
@@ -29,12 +29,14 @@ const RegistrationForm = () => {
       email: "",
       info: "",
     },
-    validationSchema: Yup.object({
+    validationSchema: Yup.object().shape({
       firstName: Yup.string().required("Required"),
       lastName: Yup.string().required("Required"),
-      contactNumber: Yup.number().required("Required"),
-      regNumber: Yup.string().required("Required"),
-      department: Yup.string().required("Required"),
+      contactNumber: Yup.number()
+        .required("Required")
+        .integer("The entered value should be a number"),
+      regNumber: srmStudent ? Yup.string().required("Required") : Yup.string(),
+      department: srmStudent ? Yup.string().required("Required") : Yup.string(),
       year: Yup.number().required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
       info: Yup.string().required("Required"),
@@ -52,7 +54,6 @@ const RegistrationForm = () => {
       console.log(values);
     },
   });
-
   return (
     <form onSubmit={formik.handleSubmit}>
       <div
@@ -97,10 +98,6 @@ const RegistrationForm = () => {
             width="w-full md:w-6/12"
           />
 
-          {formik.touched.contactNumber && formik.errors.contactNumber ? (
-            <div>{formik.errors.email}</div>
-          ) : null}
-
           <div className={`w-full m-10 ${styles.border}`}>
             <div className="w-full flex flex-col justify-center items-center p-10">
               <div className="text-2xl font-semibold">
@@ -109,6 +106,7 @@ const RegistrationForm = () => {
                   value="SRM Student"
                   checked={srmStudent}
                   onClick={radioButtonChangeHandler}
+                  onChange={radioButtonChangeHandler}
                   className="w-[20px] h-[20px] mr-5 bg-[#312658]"
                 />{" "}
                 For students of SRMIST
@@ -123,6 +121,7 @@ const RegistrationForm = () => {
                     type="text"
                     handleChange={formik.handleChange}
                     value={formik.values.regNumber}
+                    error={formik.errors.regNumber}
                     placeholder=""
                     width="w-full"
                   />
@@ -134,6 +133,7 @@ const RegistrationForm = () => {
                     type="text"
                     handleChange={formik.handleChange}
                     value={formik.values.department}
+                    error={formik.errors.department}
                     placeholder=""
                     width="w-full"
                   />
@@ -155,6 +155,7 @@ const RegistrationForm = () => {
                 handleChange={formik.handleChange}
                 value={formik.values[i + 5]}
                 placeholder={el.placeholder}
+                error={formik.errors[el.id]}
                 width={el.width}
               />
             );
