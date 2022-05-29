@@ -3,10 +3,19 @@ import FormInput from "./formInputs";
 import { useFormik } from "formik";
 import NameInput from "./nameInput";
 import { newNameInput, newFeedbackInput } from "../../utils/constants";
+import { useState } from "react";
 
+import VisibilityButton from "../shared/visibilityButton";
 import * as Yup from "yup";
+import SubmitButton from "../shared/submitBtn";
 
 const FeedbackForm = () => {
+  const [visibility, setVisibility] = useState(false);
+
+  const visibilityChanger = () => {
+    setVisibility(!visibility);
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -34,52 +43,54 @@ const FeedbackForm = () => {
 flex-col text-white"
       >
         <div className="w-1/2 lg-w-full flex flex-col justify-center items-center">
-          <FormHeading heading="Feedback Form" />
-          <div className="w-full">
-            <div className="text-xl py-4">
-              Full Name
-              <span className="text-[#ff0000]"> *</span>
-            </div>
-            <div className="flex justify-between">
-              {newNameInput.map((el, i) => {
+          <VisibilityButton handler={visibilityChanger} label="Feedback Form" />
+          {visibility ? (
+            <>
+              <FormHeading heading="Feedback Form" />
+              <div className="w-full">
+                <div className="text-xl py-4">
+                  Full Name
+                  <span className="text-[#ff0000]"> *</span>
+                </div>
+                <div className="flex justify-between">
+                  {newNameInput.map((el, i) => {
+                    return (
+                      <NameInput
+                        id={el.id}
+                        name={el.id}
+                        key={el.id}
+                        label={el.label}
+                        type={el.type}
+                        handleChange={formik.handleChange}
+                        value={formik.values[i]}
+                        placeholder={el.placeholder}
+                        width={el.width}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+              {newFeedbackInput.map((el, i) => {
                 return (
-                  <NameInput
+                  <FormInput
                     id={el.id}
                     name={el.id}
                     key={el.id}
                     label={el.label}
                     type={el.type}
                     handleChange={formik.handleChange}
-                    value={formik.values[i]}
+                    value={formik.values[i + 2]}
                     placeholder={el.placeholder}
                     width={el.width}
+                    error={formik.errors[el.id]}
                   />
                 );
               })}
-            </div>
-          </div>
-          {newFeedbackInput.map((el, i) => {
-            return (
-              <FormInput
-                id={el.id}
-                name={el.id}
-                key={el.id}
-                label={el.label}
-                type={el.type}
-                handleChange={formik.handleChange}
-                value={formik.values[i + 2]}
-                placeholder={el.placeholder}
-                width={el.width}
-                error={formik.errors[el.id]}
-              />
-            );
-          })}
-          <button
-            className="m-10 w-64 py-5 text-2xl bg-[#7509C9] rounded-lg "
-            type="submit"
-          >
-            Submit
-          </button>
+              <SubmitButton />
+            </>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </form>
