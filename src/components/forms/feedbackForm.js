@@ -52,7 +52,7 @@ const FeedbackForm = () => {
         className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
 flex-col text-white"
       >
-        <div className="w-1/2 lg-w-full flex flex-col justify-center items-center">
+        <div className="w-[75%] lg:w-1/2 lg-w-full flex flex-col justify-center items-center">
           <VisibilityButton handler={visibilityChanger} label="Feedback Form" />
           {visibility ? (
             <>

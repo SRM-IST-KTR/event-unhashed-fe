@@ -2,6 +2,7 @@ import FooterIcons from "./footerIcons";
 
 const Footer = () => {
   return (
+
     <div className="text-[#fff] h-64 xl:h-40 text-white flex justify-evenly items-center xl:flex-row flex-col text-xl lg:text-2xl p-5 text-center">
       <a
         target="_blank"
@@ -16,6 +17,7 @@ const Footer = () => {
         <a
           href="https://githubsrm.tech/"
           className="font-extrabold"
+
           target="_blank"
           rel="noreferrer noopener"
         >
