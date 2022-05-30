@@ -1,5 +1,4 @@
 import React from "react";
-// import speakerImg from "../../assets/Gita.png";
 import speakerImg from "../../utils/icons/GitaPortrait.jpeg";
 import "./Speaker.css";
 
