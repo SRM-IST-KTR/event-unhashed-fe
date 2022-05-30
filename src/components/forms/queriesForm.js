@@ -10,6 +10,7 @@ import { useFormik } from "formik";
 import { newNameInput, newQueriesInput } from "../../utils/constants";
 import FormInput from "./formInputs";
 import NameInput from "./nameInput";
+import { toast } from "react-toastify";
 
 import * as Yup from "yup";
 import { useState } from "react";
@@ -30,6 +31,15 @@ const QueriesForm = () => {
       email: Yup.string().email("Invalid email address").required("Required"),
     }),
     onSubmit: (values) => {
+      toast.success("Query Submitted Successfully.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       console.log(values);
     },
   });
@@ -41,7 +51,7 @@ const QueriesForm = () => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div
-        className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
+        className="text-[#fff] flex justify-center items-center 
 flex-col text-white"
       >
         <div className="w-[75%] lg:w-1/2 lg-w-full flex flex-col justify-center items-center">
@@ -88,7 +98,7 @@ flex-col text-white"
                     handleChange={formik.handleChange}
                     value={formik.values[i]}
                     placeholder={el.placeholder}
-                    width={el.width}
+                    width="w-full md:w-6/12"
                     error={formik.errors[el.id]}
                   />
                 );
