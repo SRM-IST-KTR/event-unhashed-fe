@@ -1,33 +1,37 @@
-import QueriesForm from "./queriesForm";
-import RegistrationForm from "./registrationForm";
-import FeedbackForm from "./feedbackForm";
-import { useState } from "react";
-import DuringEvent from "./duringEvent";
+import { useState, useEffect } from "react";
+
+import { RegistrationForm, FeedbackForm, DuringEvent } from "./";
+import { getEventStage } from "../../utils/services/rest";
 
 const Forms = () => {
-  const [eventStage, setEventStage] = useState("PRE");
+  const [eventStage, setEventStage] = useState("DURING");
 
-  const preEvent = (
-    <>
-      <RegistrationForm />
-      <QueriesForm />
-    </>
-  );
+  useEffect(() => {
+    (async () => {
+      try {
+        const stage = await getEventStage();
+        setEventStage(stage);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
+
   return (
-    <div className=" flex flex-col">
+    <>
       {(() => {
         switch (eventStage) {
           case "PRE":
-            return preEvent;
+            return <RegistrationForm />;
           case "DURING":
             return <DuringEvent />;
           case "POST":
             return <FeedbackForm />;
           default:
-            return "";
+            return <></>;
         }
       })()}
-    </div>
+    </>
   );
 };
 
