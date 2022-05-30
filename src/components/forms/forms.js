@@ -5,7 +5,7 @@ import { useState } from "react";
 import DuringEvent from "./duringEvent";
 
 const Forms = () => {
-  const [eventStage, setEventStage] = useState("DURING");
+  const [eventStage, setEventStage] = useState("PRE");
 
   const preEvent = (
     <>
@@ -14,7 +14,7 @@ const Forms = () => {
     </>
   );
   return (
-    <div className="bg-gradient-to-r from-[#000000] to-[#362A60] flex flex-col">
+    <div className=" flex flex-col">
       {(() => {
         switch (eventStage) {
           case "PRE":

@@ -1,6 +1,8 @@
 import srm from "../utils/icons/srm.png";
 import gcsrmLogo from "../utils/icons/gcsrmLogo.png";
-import { UnhashedLogo } from "../utils/icons/UnhashedLogo";
+// import { UnhashedLogo } from "../utils/icons/UnhashedLogo";
+import UnhashedLogo from "../utils/icons/Unhashed.png"
+
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -28,11 +30,11 @@ export const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="sticky z-[999] top-0 bg-gradient-to-r from-[#000000] to-[#1f134b]">
       {/* Table and Desktop Navbar */}
       <nav className=" h-32 justify-evenly pt-2 hidden md:flex ">
         <figure className="my-auto">
-          <img src={srm} alt="SRM Logo" className="max-h-24" />
+          <img src={UnhashedLogo} alt="SRM Logo" className="max-h-24" />
         </figure>
 
         <div className="flex justify-evenly md:space-x-1 lg:space-x-8 mx-8 my-auto">
@@ -71,7 +73,7 @@ export const Navbar = () => {
         </button>
 
         <figure className="flex my-auto absolute right-20 top-10 gap-4">
-          <img src={srm} alt="SRM Logo" className="h-12" />
+          <img src={UnhashedLogo} alt="SRM Logo" className="h-12" />
           <img src={gcsrmLogo} alt="GCSRM Logo" className="h-12" />
         </figure>
       </nav>

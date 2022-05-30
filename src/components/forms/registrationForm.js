@@ -12,6 +12,7 @@ import * as Yup from "yup";
 import { useState } from "react";
 import SubmitButton from "../shared/submitBtn";
 import VisibilityButton from "../shared/visibilityButton";
+import { getRecaptchaToken } from "../../utils/services/reCaptcha";
 
 const RegistrationForm = () => {
   const [srmStudent, setSrmStudent] = useState(true);
@@ -58,19 +59,18 @@ const RegistrationForm = () => {
 
     onSubmit: (values) => {
       try{
-
+        const token = getRecaptchaToken();
         axios.post("http://bd8b-157-51-51-159.in.ngrok.io/api/v1/registration/register", {
             name: `${values.firstName} ${values.lastName}`,
             email: `${values.email}`,
             phone: `${values.contactNumber}`,
             yearOfGrad: `${values.year}`,
             regNo: `${values.regNumber}`,
-            department: `${values.department}`
+            department: `${values.department}`,
           
         }, {
           'Content-Type': 'application/x-www-form-urlencoded' ,
-
-          
+          'token': `${token}` 
         }).then((response) => {
           console.log(response);
         } );
@@ -213,6 +213,7 @@ const RegistrationForm = () => {
           )}
         </div>
       </div>
+      <script src="https://www.google.com/recaptcha/api.js?render=6LdmbiogAAAAAA40Pk15mIxLjr6OFSN27akiiyN-"></script>
     </form>
   );
 };
