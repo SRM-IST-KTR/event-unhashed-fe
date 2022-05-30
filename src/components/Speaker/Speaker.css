@@ -69,3 +69,13 @@
   button:focus {
     outline: 0;
   }
+
+  .aboutSpeaker {
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    border-radius: 0;
+    padding: 20px;
+    font-size: 20px;
+  }

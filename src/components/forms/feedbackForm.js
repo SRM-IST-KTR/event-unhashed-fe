@@ -3,6 +3,7 @@ import FormInput from "./formInputs";
 import { useFormik } from "formik";
 import NameInput from "./nameInput";
 import { newNameInput, newFeedbackInput } from "../../utils/constants";
+import {toast} from "react-toastify"
 import { useState } from "react";
 
 import VisibilityButton from "../shared/visibilityButton";
@@ -32,6 +33,15 @@ const FeedbackForm = () => {
       experience: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
+      toast.success('Thank You for your Feedback🥰.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
       console.log(values);
     },
   });

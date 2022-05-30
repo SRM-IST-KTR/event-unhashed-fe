@@ -14,7 +14,7 @@ const Forms = () => {
     </>
   );
   return (
-    <div className="bg-gradient-to-r from-[#000000] to-[#362A60] flex flex-col">
+    <div className=" flex flex-col">
       {(() => {
         switch (eventStage) {
           case "PRE":
