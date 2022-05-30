@@ -1,9 +1,9 @@
-  .aboutOuterContainer {
+
+ .aboutOuterContainer {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    border-radius: 10px;
     padding: 30px 0;
   }
   

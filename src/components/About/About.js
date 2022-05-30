@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './About.css';
 
 export default function About() {
   const about = 'Getting acquainted with emerging technologies is one of the ways to move ahead of your competitors, and Blockchain is at the top. GitHub Community SRM presents UNHASHED: Demystifying The Blockchain,a hands-on session superinteded by industry professionals, aimed at providing knowledge for better understanding, and developing Smart Contracts based on Zilliqa';
 
   return (
-    <div className="aboutOuterContainer">
+    <div className="bg-gradient-to-r from-[#000000] to-[#362A60] aboutOuterContainer">
       <div className="aboutInnerContainer">
         <h1 className="heading">ABOUT</h1>
         <div className="about">
