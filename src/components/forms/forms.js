@@ -4,7 +4,7 @@ import { RegistrationForm, FeedbackForm, DuringEvent } from "./";
 import { getEventStage } from "../../utils/services/rest";
 
 const Forms = () => {
-  const [eventStage, setEventStage] = useState("DURING");
+  const [eventStage, setEventStage] = useState("PRE");
 
   useEffect(() => {
     (async () => {

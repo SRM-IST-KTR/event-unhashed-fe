@@ -48,8 +48,8 @@ const FeedbackForm = () => {
       className="flex justify-center items-center flex-col text-white"
       onSubmit={formik.handleSubmit}
     >
-      <div className="w-10/12 lg:w-1/2 flex flex-col justify-center items-center text-yellow-500">
-        <h2 className="text-[#29CCC4] bg-[#1D426B] py-5 px-10 text-3xl rounded-xl font-semibold m-10">
+      <div className="w-10/12 lg:w-1/2 flex flex-col justify-center items-center">
+        <h2 className="text-medium-turquoise bg-indigo-dye py-5 px-10 text-3xl rounded-xl font-semibold m-10">
           Feedback Form
         </h2>
 
@@ -60,7 +60,7 @@ const FeedbackForm = () => {
         </div>
 
         <button
-          className="px-6 py-2 text-lg bg-[#7509C9] rounded text-[#FFFFFF] font-bold"
+          className="px-6 py-2 text-lg bg-french-violet rounded text-white font-bold"
           type="submit"
         >
           Submit

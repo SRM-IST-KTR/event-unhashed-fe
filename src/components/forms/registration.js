@@ -19,16 +19,19 @@ const RegistrationForm = () => {
     },
 
     validationSchema: Yup.object().shape({
-      firstName: Yup.string().trim().required("Required"),
-      lastName: Yup.string().required("Required"),
-      email: Yup.string()
+      firstName: Yup.string("Invalid input type.").trim().required("Required."),
+      lastName: Yup.string("Invalid input type.").required("Required."),
+      email: Yup.string("Invalid input type.")
         .trim()
-        .email("Invalid email address")
-        .required("Required"),
-      phone: Yup.number().min(10).required("Required"),
-      regNo: Yup.string().trim(),
-      department: Yup.string().trim(),
-      yearOfGrad: Yup.number().min(2023).max(2026).required("Required"),
+        .email("Invalid email address.")
+        .required("Required."),
+      phone: Yup.number("Invalid input type.").min(10).required("Required."),
+      yearOfGrad: Yup.number("Invalid input type.")
+        .min(2023, "Minimum 2023.")
+        .max(2026, "Maximum 2026")
+        .required("Required."),
+      regNo: Yup.string("Invalid input type.").trim(),
+      department: Yup.string("Invalid input type.").trim(),
     }),
 
     onSubmit: async (values) => {
@@ -54,19 +57,31 @@ const RegistrationForm = () => {
       className="flex justify-center items-center flex-col text-white"
       onSubmit={formik.handleSubmit}
     >
-      <div className="w-10/12 lg:w-1/2 flex flex-col justify-center items-center text-yellow-500">
-        <h2 className="text-[#29CCC4] bg-[#1D426B] py-5 px-10 text-3xl rounded-xl font-semibold m-10">
+      <div className="w-10/12 lg:w-1/2 flex flex-col justify-center items-center">
+        <h2 className="text-medium-turquoise bg-indigo-dye py-5 px-10 text-3xl rounded-xl font-semibold m-10">
           Registration Form
         </h2>
 
         <div className="flex flex-wrap justify-between w-full">
           {REGISTRATION_INPUTS.map((input, i) => (
-            <Input key={input.name} {...input} />
+            <>
+              <Input key={input.name} {...input} />
+
+              {
+                <span className="text-red-500 font-semibold">
+                  {formik.touched[input.name]
+                    ? formik.errors[input.name]
+                      ? formik.errors[input.name]
+                      : "\u00A0"
+                    : "\u00A0"}
+                </span>
+              }
+            </>
           ))}
         </div>
 
         <button
-          className="px-6 py-2 text-lg bg-[#7509C9] rounded text-[#FFFFFF] font-bold"
+          className="px-6 py-2 text-lg bg-french-violet capitalize rounded text-white font-bold"
           type="submit"
         >
           Submit
