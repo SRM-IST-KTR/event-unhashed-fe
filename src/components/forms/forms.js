@@ -5,7 +5,7 @@ import { useState } from "react";
 import DuringEvent from "./duringEvent";
 
 const Forms = () => {
-  const [eventStage, setEventStage] = useState("DURING");
+  const [eventStage, setEventStage] = useState("PRE");
 
   const preEvent = (
     <>

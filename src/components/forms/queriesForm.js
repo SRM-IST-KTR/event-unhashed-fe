@@ -44,7 +44,7 @@ const QueriesForm = () => {
         className="bg-gradient-to-r from-[#000000] to-[#362A60] flex justify-center items-center 
 flex-col text-white"
       >
-        <div className="w-1/2 lg-w-full flex flex-col justify-center items-center">
+        <div className="w-[75%] lg:w-1/2 lg-w-full flex flex-col justify-center items-center">
           <button
             className="text-[#29CCC4] bg-[#1D426B] py-5 px-10 text-3xl rounded-xl font-semibold m-10"
             onClick={visibilityChanger}
