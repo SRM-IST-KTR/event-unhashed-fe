@@ -2,9 +2,9 @@ import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import { toast } from "react-toastify";
 
-import { Input } from "../shared";
-import { FEEDBACK_INPUTS } from "../../utils/constants";
-import { postRegistration } from "../../utils/services/rest";
+import { Input } from "../../shared";
+import { FEEDBACK_INPUTS } from "../../../utils/constants";
+import { postRegistration } from "../../../utils/services/rest";
 
 const FeedbackForm = () => {
   const initialValues = {

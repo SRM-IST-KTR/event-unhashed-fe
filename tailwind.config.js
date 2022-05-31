@@ -6,6 +6,7 @@ module.exports = {
         "indigo-dye": "#1D426B",
         "medium-turquoise": "#29CCC4",
         "french-violet": "#7509C9",
+        "russian-violet": "#1F134B",
       },
     },
   },

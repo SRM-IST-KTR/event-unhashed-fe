@@ -1,17 +1,11 @@
-import "./App.css";
-import { Navbar } from "./components/Navbar";
-import { Sponsors } from "./components/Sponsors";
-import Speaker from "./components/Speaker/Speaker";
-import About from "./components/About/About";
-import { Banner } from "./components/Banner";
-import Footer from "./components/footer/footer";
-import Timer from "./components/timer/timer";
-import { Register } from "./components/Register";
-import Forms from "./components/forms/forms";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
-function App() {
+import "./App.css";
+import { Navbar, Footer } from "./components/shared";
+import { Home } from "./components/home";
+
+const App = () => {
   return (
     <div
       className="App"
@@ -21,21 +15,14 @@ function App() {
         backgroundRepeat: "no-repeat",
       }}
     >
-
       <body>
         <ToastContainer />
         <Navbar />
-        <Banner />
-        <Register />
-        <About />
-        <Speaker />
-        <Sponsors />
-        <Timer />
-        <Forms />
+        <Home />
         <Footer />
       </body>
     </div>
   );
-}
+};
 
 export default App;

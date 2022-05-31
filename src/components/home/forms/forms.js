@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { RegistrationForm, FeedbackForm, DuringEvent } from "./";
-import { getEventStage } from "../../utils/services/rest";
+import { getEventStage } from "../../../utils/services/rest";
 
 const Forms = () => {
   const [eventStage, setEventStage] = useState("registration");

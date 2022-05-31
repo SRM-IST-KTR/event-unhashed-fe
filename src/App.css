@@ -6,11 +6,18 @@
   border-width: 20px;
   border-radius: 28px;
   border-image: url("/src/utils/icons/RectangleBorder.png") 30;
+  /* border-image: linear-gradient(
+    135.22deg,
+    #218fcd 18.73%,
+    rgba(28, 102, 144, 0) 42.41%,
+    #00e9ff 60.54%,
+    #1c6690 100%
+  ); */
 }
 
 html,
 body {
-  @apply p-0 m-0;
+  @apply p-0 m-0 text-white;
   font-family: "Roboto", sans-serif;
 }
 

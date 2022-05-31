@@ -3,11 +3,11 @@ import * as Yup from "yup";
 import "yup-phone";
 import { Formik, Form } from "formik";
 
-import { Input } from "../shared";
-import { REGISTRATION_INPUTS } from "../../utils/constants";
-import { postRegistration } from "../../utils/services/rest";
-import { Loader } from "../../utils/icons";
-import { Toast } from "../../utils/functions";
+import { Input } from "../../shared";
+import { REGISTRATION_INPUTS } from "../../../utils/constants";
+import { postRegistration } from "../../../utils/services/rest";
+import { Loader } from "../../../utils/icons";
+import { Toast } from "../../../utils/functions";
 
 const RegistrationForm = () => {
   const [loading, setLoading] = useState(false);
