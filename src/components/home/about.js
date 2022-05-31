@@ -3,7 +3,7 @@ import { Location, Calendar } from "../../utils/icons";
 const About = () => {
   return (
     <section
-      className="flex flex-col mx-8 md:w-6/12 md:mx-auto gradientBox my-16 p-8"
+      className="flex flex-col mx-8 md:w-8/12 md:mx-auto gradientBox my-16 px-4 md:px-8 pt-8"
       id="about"
     >
       <h2 className="uppercase text-medium-turquoise text-3xl font-bold text-center">
@@ -22,7 +22,7 @@ const About = () => {
       </div>
 
       <div className="text-lg font-bold">
-        <div className="flex justify-between w-10/12 mx-auto">
+        <div className="flex justify-between w-11/12 mx-auto">
           <p className="flex items-center gap-x-4">
             <span className="w-8">
               <Calendar />

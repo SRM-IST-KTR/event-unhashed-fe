@@ -19,7 +19,7 @@ const Sponsors = () => {
 
       <Marquee
         height="360px"
-        width="80%"
+        width="85%"
         pauseOnHover={true}
         className="mx-auto my-8 p-8 gradientBox"
       >
