@@ -43,7 +43,7 @@ const RegistrationForm = () => {
   const onSubmit = async (values, { resetForm }) => {
     try {
       setLoading(true);
-      // await postRegistration(values);
+      await postRegistration(values);
       Toast(true, "Registered Successfully! See you soon 🥰");
       resetForm();
     } catch (err) {
