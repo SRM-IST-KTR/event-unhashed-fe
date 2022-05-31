@@ -1,6 +1,6 @@
 const DuringEvent = () => {
   return (
-    <section className="w-fit mx-auto my-20 text-white text-xl lg:text-2xl text-center border-2 p-10 font-semibold rounded-lg">
+    <section className="w-fit mx-auto my-20 text-white text-xl lg:text-2xl text-center border-2 p-10 font-semibold rounded-lg gradientBox">
       Oh no! You missed the deadline.
       <br />
       There may be on-spot registrations available on the venue.

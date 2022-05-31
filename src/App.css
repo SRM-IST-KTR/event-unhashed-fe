@@ -24,3 +24,7 @@ body {
 * {
   @apply box-border;
 }
+
+.grecaptcha-badge {
+  @apply hidden;
+}
