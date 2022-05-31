@@ -54,12 +54,13 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="text-5lg flex w-48 justify-around">
-        {socials.map((social) => (
+      <div className="text-5lg flex w-64 justify-around">
+        {socials.map((social, i) => (
           <a
+            key={i}
             href={social.url}
             target="_blank"
-            className="mx-1"
+            className="mx-5"
             rel="noreferrer noopener"
           >
             {social.icon}

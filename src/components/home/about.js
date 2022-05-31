@@ -22,15 +22,15 @@ const About = () => {
       </div>
 
       <div className="text-lg font-bold">
-        <div className="flex justify-between w-11/12 mx-auto">
-          <p className="flex items-center gap-x-4">
+        <div className="flex justify-between w-11/12 mx-auto flex-col md:flex-row ">
+          <p className="flex items-center gap-x-4 my-4">
             <span className="w-8">
               <Calendar />
             </span>
             6th June 2022
           </p>
 
-          <p className="flex items-center gap-x-4">
+          <p className="flex items-center gap-x-4 my-4">
             <span className="w-8">
               <Location />
             </span>
@@ -38,12 +38,12 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex justify-between w-10/12 mx-auto mt-4">
-          <p className="mt-2 md:mt-3">
+        <div className="flex flex-col md:flex-row justify-between w-10/12 mx-auto md:mt-4">
+          <p className="my-4">
             <span className="text-medium-turquoise">DURATION:</span> 4-5 Hours
           </p>
 
-          <p className="mt-2">
+          <p className="my-4">
             <span className="text-medium-turquoise">TIME:</span> 12:30 PM - 5:30
             PM
           </p>

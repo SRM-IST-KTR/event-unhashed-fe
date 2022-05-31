@@ -26,7 +26,7 @@ const Speaker = () => {
                 href="https://www.instagram.com/gitaalekhyapaul/"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="h-11"
+                className="h-7"
               >
                 <Instagram />
               </a>
@@ -35,7 +35,7 @@ const Speaker = () => {
                 href="https://github.com/gitaalekhyapaul"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="h-11"
+                className="h-7"
               >
                 <GitHub />
               </a>
@@ -44,7 +44,7 @@ const Speaker = () => {
                 href="https://twitter.com/gitaalekhyapaul"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="h-11"
+                className="h-7"
               >
                 <Twitter />
               </a>
@@ -53,7 +53,7 @@ const Speaker = () => {
                 href="https://www.linkedin.com/in/gitaalekhyapaul/"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="h-11"
+                className="h-7"
               >
                 <Linkedin />
               </a>

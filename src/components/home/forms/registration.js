@@ -69,7 +69,9 @@ const RegistrationForm = () => {
             {REGISTRATION_INPUTS.map((input, i) => (
               <div
                 key={input.name}
-                className={`flex flex-col ${i < 2 ? "w-5/12" : "w-full"}`}
+                className={`flex flex-col ${
+                  i < 2 ? "md:w-5/12 w-full" : "w-full"
+                }`}
               >
                 <Input key={input.name} {...input} />
                 {
