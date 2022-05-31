@@ -1,26 +1,10 @@
-import { useState, useEffect } from "react";
-
 import { RegistrationForm, FeedbackForm, DuringEvent } from "./";
-import { getEventStage } from "../../../utils/services/rest";
 
-const Forms = () => {
-  const [eventStage, setEventStage] = useState("registration");
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const stage = await getEventStage();
-        setEventStage(stage);
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  }, []);
-
+const Forms = ({ stage }) => {
   return (
     <>
       {(() => {
-        switch (eventStage) {
+        switch (stage) {
           case "registration":
             return <RegistrationForm />;
           case "onspot":

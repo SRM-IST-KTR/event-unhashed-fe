@@ -44,8 +44,8 @@ const About = () => {
           </p>
 
           <p className="mt-2">
-            <span className="text-medium-turquoise">TIME:</span> 12:30 pm - 5:30
-            pm
+            <span className="text-medium-turquoise">TIME:</span> 12:30 PM - 5:30
+            PM
           </p>
         </div>
       </div>

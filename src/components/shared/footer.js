@@ -46,7 +46,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          Github Community SRM
+          GitHub Community SRM
         </a>
 
         <a

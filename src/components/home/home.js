@@ -1,14 +1,14 @@
 import { Hero, About, Speaker, Sponsors, Timer, Forms } from ".";
 
-const Home = () => {
+const Home = ({ stage, deadline }) => {
   return (
     <>
       <Hero />
       <About />
       <Speaker />
       <Sponsors />
-      <Timer />
-      <Forms />
+      <Timer deadline={deadline} />
+      <Forms stage={stage} />
     </>
   );
 };

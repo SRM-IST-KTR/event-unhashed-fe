@@ -12,11 +12,9 @@ const ENDPOINTS = {
   FEEDBACK: "/feedback/unhashed",
 };
 
-export const getEventStage = async () => {
-  const {
-    data: { stage },
-  } = await instance.get(ENDPOINTS.EVENT_DATA);
-  return stage;
+export const getEventData = async () => {
+  const { data } = await instance.get(ENDPOINTS.EVENT_DATA);
+  return data;
 };
 
 export const postRegistration = async (data) => {
