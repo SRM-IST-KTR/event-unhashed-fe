@@ -29,7 +29,7 @@ const Sponsors = () => {
             href={sponsor.url}
             target="_blank"
             rel="noreferrer noopener"
-            className="p-4 text-base font-extrabold h-80 flex flex-col justify-between"
+            className="p-4 text-base font-extrabold h-80 flex flex-col justify-between mx-12"
           >
             <figure className="flex flex-col mb-8 h-4/5">
               <img

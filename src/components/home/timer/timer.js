@@ -8,7 +8,7 @@ const Timer = ({ deadline }) => {
         Registrations
       </h2>
 
-      <div className="flex flex-col md:flex-row md:w-8/12 md:mx-auto my-8">
+      <div className="flex flex-col md:flex-row md:w-11/12 md:mx-auto my-8 justify-center items-center">
         <figure className="md:basis-2/5">
           <img
             src={OldOctoCat}

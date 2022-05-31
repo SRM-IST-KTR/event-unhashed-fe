@@ -1,26 +1,21 @@
-import { MdEmail } from "react-icons/md";
-import {
-  AiFillTwitterSquare,
-  AiFillInstagram,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import { Mail, Instagram, Linkedin, Twitter } from "../../utils/icons";
 
 const Footer = () => {
   const socials = [
     {
-      icon: <MdEmail />,
+      icon: <Mail />,
       url: "mailto:community@githubsrm.tech",
     },
     {
-      icon: <AiFillTwitterSquare />,
+      icon: <Twitter />,
       url: "https://twitter.com/GithubSrm",
     },
     {
-      icon: <AiFillInstagram />,
+      icon: <Instagram />,
       url: "https://www.instagram.com/githubsrm/",
     },
     {
-      icon: <AiFillLinkedin />,
+      icon: <Linkedin />,
       url: "https://www.linkedin.com/company/githubsrm/mycompany/",
     },
   ];
@@ -59,9 +54,14 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="text-5lg flex w-64 justify-around">
+      <div className="text-5lg flex w-48 justify-around">
         {socials.map((social) => (
-          <a href={social.url} target="_blank" rel="noreferrer noopener">
+          <a
+            href={social.url}
+            target="_blank"
+            className="mx-1"
+            rel="noreferrer noopener"
+          >
             {social.icon}
           </a>
         ))}

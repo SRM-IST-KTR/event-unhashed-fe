@@ -1,8 +1,10 @@
+import { GitHub, Instagram, Linkedin, Twitter } from "../../utils/icons";
+
 const Speaker = () => {
   return (
     <section
       id="speakers"
-      className="mx-5 w-11/12 md:mt-10 md:w-8/12 md:mx-auto"
+      className="mx-5 w-11/12 md:mt-10 md:mx-auto max-w-4xl "
     >
       <h2 className="uppercase text-medium-turquoise text-3xl font-bold text-center">
         Speaker
@@ -21,41 +23,45 @@ const Speaker = () => {
           <figcaption>
             <div className="flex gap-2 mt-2 mx-auto">
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/gitaalekhyapaul/"
                 target="_blank"
                 rel="noreferrer noopener"
+                className="h-11"
               >
-                <i className="fa fa-brands fa-instagram fa-3x"></i>
+                <Instagram />
               </a>
 
               <a
-                href="https://github.com/"
+                href="https://github.com/gitaalekhyapaul"
                 target="_blank"
                 rel="noreferrer noopener"
+                className="h-11"
               >
-                <i className="fa fa-brands fa-github fa-3x"></i>
+                <GitHub />
               </a>
 
               <a
-                href="https://twitter.com/"
+                href="https://twitter.com/gitaalekhyapaul"
                 target="_blank"
                 rel="noreferrer noopener"
+                className="h-11"
               >
-                <i className="fa fa-brands fa-twitter fa-3x"></i>
+                <Twitter />
               </a>
 
               <a
-                href="https://linked.com/"
+                href="https://www.linkedin.com/in/gitaalekhyapaul/"
                 target="_blank"
                 rel="noreferrer noopener"
+                className="h-11"
               >
-                <i className="fa fa-brands fa-linkedin fa-3x"></i>
+                <Linkedin />
               </a>
             </div>
           </figcaption>
         </div>
 
-        <p className="italic font-medium text-xl w-full p-5 md:p-0">
+        <p className="italic font-medium text-xl w-full p-5 md:p-0 text-center md:text-left">
           Gita Alekhya Paul is an undergraduate student at SRMIST,
           Kattankulathur.He is an MLH Fellowship alumni and contributor to
           popular repositories like Amazon AWS Amplify and Hoppscotch. Gita is a
