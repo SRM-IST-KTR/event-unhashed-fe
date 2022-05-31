@@ -3,7 +3,7 @@ import { Location, Calendar } from "../../utils/icons";
 const About = () => {
   return (
     <section
-      className="flex flex-col mx-8 max-w-4xl w-11/12 md:mx-auto gradientBox my-16 px-4 md:px-8 pt-8"
+      className="flex flex-col max-w-4xl w-11/12 mx-auto gradientBox my-16 px-4 md:px-8 pt-8"
       id="about"
     >
       <h2 className="uppercase text-medium-turquoise text-3xl font-bold text-center">

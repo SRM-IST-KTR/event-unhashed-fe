@@ -41,7 +41,7 @@ const Sponsors = () => {
         width="85%"
         pauseOnHover={true}
         className="mx-auto my-8 p-8 gradientBox"
-        duration={Math.max(10000, sponsors.length * 1000)}
+        duration={Math.max(12000, sponsors.length * 1000)}
         reverse
       >
         {sponsors.map((sponsor) => (
