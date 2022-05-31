@@ -55,9 +55,9 @@ const Footer = () => {
       </div>
 
       <div className="text-5lg flex w-64 justify-around">
-        {socials.map((social, i) => (
+        {socials.map((social) => (
           <a
-            key={i}
+            key={social.url}
             href={social.url}
             target="_blank"
             className="mx-5"

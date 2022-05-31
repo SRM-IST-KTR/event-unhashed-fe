@@ -61,7 +61,7 @@ const RegistrationForm = () => {
     >
       {({ touched, errors }) => (
         <Form className="max-w-4xl w-10/12 mx-auto flex flex-col justify-center items-center text-white">
-          <h2 className="text-medium-turquoise bg-indigo-dye py-5 px-10 text-3xl rounded-xl font-semibold m-10">
+          <h2 className="text-medium-turquoise bg-indigo-dye py-5 px-5 lg:px-10 text-xl lg:text-3xl rounded-xl font-semibold m-10">
             Registration Form
           </h2>
 

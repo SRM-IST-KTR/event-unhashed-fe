@@ -37,10 +37,12 @@ const Sponsors = () => {
       </h2>
 
       <Marquee
-        height="360px"
+        height="25rem"
         width="85%"
         pauseOnHover={true}
         className="mx-auto my-8 p-8 gradientBox"
+        duration={Math.max(10000, sponsors.length * 1000)}
+        reverse
       >
         {sponsors.map((sponsor) => (
           <a
@@ -50,7 +52,7 @@ const Sponsors = () => {
             rel="noreferrer noopener"
             className="p-4 text-base font-extrabold h-80 flex flex-col justify-between mx-12"
           >
-            <figure className="flex flex-col mb-8 h-4/5">
+            <figure className="flex flex-col mb-8 h-36 md:h-4/5">
               <img
                 src={sponsor.img}
                 alt={`${sponsor.name} | Unahashed | GitHub Community SRM`}
