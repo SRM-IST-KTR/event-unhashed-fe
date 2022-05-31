@@ -40,11 +40,12 @@ const RegistrationForm = () => {
     department: Yup.string("Invalid input type.").trim(),
   });
 
-  const onSubmit = async (values) => {
+  const onSubmit = async (values, { resetForm }) => {
     try {
       setLoading(true);
-      await postRegistration(values);
+      // await postRegistration(values);
       Toast(true, "Registered Successfully! See you soon 🥰");
+      resetForm();
     } catch (err) {
       console.log(err);
       Toast(false, "Uh oh! We are facing some issues. Please again later!");
