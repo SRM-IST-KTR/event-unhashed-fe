@@ -8,8 +8,8 @@ export const REGISTRATION_INPUTS = [
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
-      wrapper: "w-5/12 flex flex-col mb-4",
+      label: "text-xl py-4",
+      wrapper: "w-full flex flex-col mb-4",
     },
   },
   {
@@ -21,8 +21,8 @@ export const REGISTRATION_INPUTS = [
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
-      wrapper: "w-5/12 flex flex-col mb-4",
+      label: "text-xl py-4",
+      wrapper: "w-full flex flex-col mb-4",
     },
   },
   {
@@ -35,7 +35,7 @@ export const REGISTRATION_INPUTS = [
     description: "As per your ID card",
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -48,7 +48,7 @@ export const REGISTRATION_INPUTS = [
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -61,7 +61,7 @@ export const REGISTRATION_INPUTS = [
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -75,7 +75,7 @@ export const REGISTRATION_INPUTS = [
     description: "Only for SRM Students. As per your ID card.",
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -89,7 +89,7 @@ export const REGISTRATION_INPUTS = [
     description: "Only for SRM Students. With the Specialization.",
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -106,7 +106,7 @@ export const FEEDBACK_INPUTS = [
     description: "As per your ID card",
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -119,7 +119,7 @@ export const FEEDBACK_INPUTS = [
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -132,7 +132,7 @@ export const FEEDBACK_INPUTS = [
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },
@@ -145,7 +145,7 @@ export const FEEDBACK_INPUTS = [
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
-      label: "text-xl py-4 text-[#FFFFFF]",
+      label: "text-xl py-4",
       wrapper: "w-full flex flex-col mb-4",
     },
   },

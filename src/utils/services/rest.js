@@ -3,18 +3,20 @@ import axios from "axios";
 import { getRecaptchaToken } from "./recaptcha";
 
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL,
+  baseURL: `${process.env.REACT_APP_API_BASE_URL}/api/v1`,
 });
 
 const ENDPOINTS = {
-  EVENT_STAGE: "/event-stage",
-  REGISTER: "/register",
-  postFeedback: "/feedback",
+  EVENT_DATA: "/registration/event-data/unhashed",
+  REGISTER: "/registration/register/unhashed",
+  FEEDBACK: "/feedback/unhashed",
 };
 
 export const getEventStage = async () => {
-  const { data } = await instance.get(ENDPOINTS.EVENT_STAGE);
-  return data;
+  const {
+    data: { stage },
+  } = await instance.get(ENDPOINTS.EVENT_DATA);
+  return stage;
 };
 
 export const postRegistration = async (data) => {

@@ -1,3 +1,5 @@
+import { Field } from "formik";
+
 const Input = (props) => {
   switch (props.type) {
     case "text":
@@ -15,13 +17,13 @@ const Input = (props) => {
             </label>
           )}
           {props.type === "textarea" ? (
-            <input
+            <Field
               {...props}
               component="textarea"
               className={props.classNames?.input ?? ""}
             />
           ) : (
-            <input {...props} className={props.classNames?.input ?? ""} />
+            <Field {...props} className={props.classNames?.input ?? ""} />
           )}
 
           {props.description && (
@@ -42,7 +44,7 @@ const Input = (props) => {
               {props.required && <span> *</span>}
             </label>
           )}
-          <input
+          <Field
             {...props}
             as="select"
             className={props.classNames?.input ?? ""}
@@ -59,7 +61,7 @@ const Input = (props) => {
                 {choice.text}
               </option>
             ))}
-          </input>
+          </Field>
 
           {props.description && (
             <p className={props.classNames?.description ?? ""}>
@@ -79,7 +81,7 @@ const Input = (props) => {
               htmlFor={`${props.name}.${choice.value}`}
               className={props.classNames?.label ?? ""}
             >
-              <input
+              <Field
                 {...props}
                 id={`${props.name}.${choice.value}`}
                 placeholder={props.placeholder ?? ""}

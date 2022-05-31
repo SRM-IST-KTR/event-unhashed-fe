@@ -4,7 +4,7 @@ import { RegistrationForm, FeedbackForm, DuringEvent } from "./";
 import { getEventStage } from "../../utils/services/rest";
 
 const Forms = () => {
-  const [eventStage, setEventStage] = useState("PRE");
+  const [eventStage, setEventStage] = useState("registration");
 
   useEffect(() => {
     (async () => {
@@ -21,11 +21,11 @@ const Forms = () => {
     <>
       {(() => {
         switch (eventStage) {
-          case "PRE":
+          case "registration":
             return <RegistrationForm />;
-          case "DURING":
+          case "onspot":
             return <DuringEvent />;
-          case "POST":
+          case "closed":
             return <FeedbackForm />;
           default:
             return <></>;
