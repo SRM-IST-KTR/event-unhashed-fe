@@ -9,7 +9,7 @@ import { getEventData } from "./utils/services/rest";
 
 const App = () => {
   const [eventStage, setEventStage] = useState("registration");
-  const [eventDeadline, setEventDeadline] = useState(new Date("June 1, 2022"));
+  const [eventDeadline, setEventDeadline] = useState(new Date("June 5, 2022"));
 
   useEffect(() => {
     (async () => {
