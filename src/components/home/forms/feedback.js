@@ -26,14 +26,14 @@ const FeedbackForm = () => {
       .required("Required"),
     thoughts: Yup.string()
       .trim()
-      .min(30, "Minimum 30 characters Reqd")
+      .min(30, "Minimum 30 characters Required")
       .required("Required"),
     exp_gained: Yup.string()
       .trim()
-      .min(30, "Minimum 30 characters Reqd")
+      .min(30, "Minimum 30 characters Required")
       .required("Required"),
     recommendations: Yup.string()
-      .min(30, "Minimum 30 characters Reqd")
+      .min(30, "Minimum 30 characters Required")
       .required("Required"),
   });
 
