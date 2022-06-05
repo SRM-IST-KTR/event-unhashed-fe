@@ -24,9 +24,17 @@ const FeedbackForm = () => {
       .trim()
       .email("Invalid email address")
       .required("Required"),
-    thoughts: Yup.string().trim().min(30).required("Required"),
-    exp_gained: Yup.string().trim().min(30).required("Required"),
-    recommendations: Yup.string().min(30).required("Required"),
+    thoughts: Yup.string()
+      .trim()
+      .min(30, "Minimum 30 characters Reqd")
+      .required("Required"),
+    exp_gained: Yup.string()
+      .trim()
+      .min(30, "Minimum 30 characters Reqd")
+      .required("Required"),
+    recommendations: Yup.string()
+      .min(30, "Minimum 30 characters Reqd")
+      .required("Required"),
   });
 
   const onSubmit = async (values, { resetForm }) => {
