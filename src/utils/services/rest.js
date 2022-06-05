@@ -28,7 +28,7 @@ export const postRegistration = async (data) => {
 
 export const postFeedback = async (data) => {
   const recaptchaToken = await getRecaptchaToken();
-  await instance.post(ENDPOINTS.REGISTER, data, {
+  await instance.post(ENDPOINTS.FEEDBACK, data, {
     headers: {
       "x-recaptcha-token": recaptchaToken,
     },
