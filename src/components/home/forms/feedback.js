@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 import { Input } from "../../shared";
 import { FEEDBACK_INPUTS } from "../../../utils/constants";
-import { postRegistration } from "../../../utils/services/rest";
+import { postFeedback } from "../../../utils/services/rest";
 
 import { useState } from "react";
 import { Loader } from "../../../utils/icons";
@@ -40,9 +40,8 @@ const FeedbackForm = () => {
   const onSubmit = async (values, { resetForm }) => {
     try {
       setLoading(true);
-      console.log(values);
-      await postRegistration(values);
-      toast.success("Registered Successfully! See you soon 🥰", {
+      await postFeedback(values);
+      toast.success("Thank you for your feedback! 🥰", {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
