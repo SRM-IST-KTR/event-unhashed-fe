@@ -15,7 +15,7 @@ const FeedbackForm = () => {
   const initialValues = {
     email: "",
     thoughts: "",
-    experience: "",
+    exp_gained: "",
     recommendations: "",
   };
 
@@ -24,9 +24,9 @@ const FeedbackForm = () => {
       .trim()
       .email("Invalid email address")
       .required("Required"),
-    thoughts: Yup.string().trim().required("Required"),
-    experience: Yup.string().trim().required("Required"),
-    recommendations: Yup.string().required("Required"),
+    thoughts: Yup.string().trim().min(30).required("Required"),
+    exp_gained: Yup.string().trim().min(30).required("Required"),
+    recommendations: Yup.string().min(30).required("Required"),
   });
 
   const onSubmit = async (values, { resetForm }) => {
@@ -66,7 +66,7 @@ const FeedbackForm = () => {
             </h2>
 
             <div className="flex flex-wrap justify-between w-full">
-              {FEEDBACK_INPUTS.map((input, i) => (
+              {FEEDBACK_INPUTS.map((input) => (
                 <div key={input.name} className="flex flex-col w-full">
                   <Input key={input.name} {...input} />
                   {

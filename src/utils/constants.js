@@ -124,9 +124,9 @@ export const FEEDBACK_INPUTS = [
     },
   },
   {
-    name: "experience",
+    name: "exp_gained",
     label: "How was your Experience",
-    id: "experience",
+    id: "exp_gained",
     type: "textarea",
     placeholder: "Experience",
     required: true,
