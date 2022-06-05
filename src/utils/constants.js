@@ -115,7 +115,7 @@ export const FEEDBACK_INPUTS = [
     label: "Thoughts on the event",
     id: "thoughts",
     type: "textarea",
-    placeholder: "9899xxxxxx",
+    placeholder: "Thoughts",
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
@@ -128,7 +128,7 @@ export const FEEDBACK_INPUTS = [
     label: "How was your Experience",
     id: "experience",
     type: "textarea",
-    placeholder: "9899xxxxxx",
+    placeholder: "Experience",
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",
@@ -141,7 +141,7 @@ export const FEEDBACK_INPUTS = [
     label: "Recommendations",
     id: "recommendations",
     type: "textarea",
-    placeholder: "9899xxxxxx",
+    placeholder: "Recommendations",
     required: true,
     classNames: {
       input: "p-4 text-lg text-black rounded-2xl",

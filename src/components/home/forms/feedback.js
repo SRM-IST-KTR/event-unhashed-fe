@@ -6,7 +6,12 @@ import { Input } from "../../shared";
 import { FEEDBACK_INPUTS } from "../../../utils/constants";
 import { postRegistration } from "../../../utils/services/rest";
 
+import { useState } from "react";
+import { Loader } from "../../../utils/icons";
+import { Toast } from "../../../utils/functions";
+
 const FeedbackForm = () => {
+  const [loading, setLoading] = useState(false);
   const initialValues = {
     email: "",
     thoughts: "",
@@ -24,8 +29,9 @@ const FeedbackForm = () => {
     recommendations: Yup.string().required("Required"),
   });
 
-  const onSubmit = async (values) => {
+  const onSubmit = async (values, { resetForm }) => {
     try {
+      setLoading(true);
       console.log(values);
       await postRegistration(values);
       toast.success("Registered Successfully! See you soon 🥰", {
@@ -37,8 +43,12 @@ const FeedbackForm = () => {
         draggable: true,
         progress: undefined,
       });
+      resetForm();
     } catch (err) {
       console.log(err);
+      Toast(false, "Uh oh! We are facing some issues. Please again later!");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -73,10 +83,11 @@ const FeedbackForm = () => {
             </div>
 
             <button
-              className="px-6 py-2 text-lg bg-french-violet rounded text-white font-bold"
+              className="px-6 py-2 w-28 text-center text-lg bg-french-violet capitalize rounded text-white font-bold"
               type="submit"
+              disabled={loading}
             >
-              Submit
+              {!loading ? "Submit" : <Loader />}
             </button>
           </div>
         </Form>
